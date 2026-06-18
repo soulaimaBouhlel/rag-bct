@@ -1,2 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
 .venv/
+
+# IDE
 .idea/
+
+# Outputs (generated files)
+chunks.json
+output.md
+
+# OS
+.DS_Store
