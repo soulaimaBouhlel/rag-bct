@@ -14,3 +14,8 @@ output.md
 
 # OS
 .DS_Store
+# Chroma database
+data/chroma/
+
+# Generated embeddings
+data/embeddings.json
