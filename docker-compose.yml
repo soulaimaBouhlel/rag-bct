@@ -1,0 +1,30 @@
+networks:
+  regulations:
+    driver: bridge
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: bct-qdrant
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+      - "6334:6334"
+    volumes:
+      - ${QDRANT_DATA_PATH:-./qdrant_data/storage}:/qdrant/storage
+    environment:
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-}
+      QDRANT_PREFER_MMAP: "true"
+      QDRANT_MAX_INDEXING_THREADS: "0"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/collections"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - regulations
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
