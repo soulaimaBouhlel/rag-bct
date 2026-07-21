@@ -5,8 +5,8 @@ from collections import Counter
 
 from docling.document_converter import DocumentConverter
 
-from bct_rag.config import PDF_DIR, CHUNKS_FILE
-from bct_rag.ingestion.chunker import chunk_markdown, parse_circular_ref
+from src.bct_rag.config import PDF_DIR, CHUNKS_FILE
+from src.bct_rag.ingestion.chunker import chunk_markdown, parse_circular_ref
 
 converter = DocumentConverter()
 

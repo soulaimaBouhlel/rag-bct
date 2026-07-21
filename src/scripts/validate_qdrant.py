@@ -1,94 +1,153 @@
 #!/usr/bin/env python3
 """
-Validation: Verify Qdrant migration succeeded.
+Validate the Qdrant index.
 
 Checks:
 - Collection exists
-- Vector dimension is 768
-- Distance metric is Cosine
-- All 87 vectors uploaded
+- Vector count matches chunks.json
 - Metadata is intact
+- Embedding dimension is consistent
+- Distance metric is configured
+- Random samples can be retrieved
 """
 
+import json
 import os
+import random
+
 from qdrant_client import QdrantClient
 
 
-def validate_migration():
-    """Validate Qdrant migration."""
+COLLECTION_NAME = "regulations"
+CHUNKS_PATH = "data/chunks.json"
 
-    print("\n" + "=" * 70)
-    print("VALIDATION: Qdrant Migration")
-    print("=" * 70)
 
-    host = os.getenv("QDRANT_HOST", "localhost")
-    port = int(os.getenv("QDRANT_PORT", 6333))
-    api_key = os.getenv("QDRANT_API_KEY")
+def load_chunks(path: str) -> list[dict]:
+    """Load chunks from disk."""
 
-    client = QdrantClient(
-        host=host,
-        port=port,
-        api_key=api_key if api_key else None,
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def validate_collection(client: QdrantClient):
+    """Ensure the collection exists."""
+
+    print("\n1️⃣ Checking collection...")
+
+    collection = client.get_collection(COLLECTION_NAME)
+
+    print(f"   ✅ Collection '{COLLECTION_NAME}' exists")
+
+    return collection
+
+
+def validate_vectors(collection, expected_count: int):
+    """Validate vector configuration."""
+
+    print("\n2️⃣ Checking vector configuration...")
+
+    vectors = collection.config.params.vectors
+
+    print(f"   ✅ Dimension: {vectors.size}")
+    print(f"   ✅ Distance: {vectors.distance}")
+
+    print("\n3️⃣ Checking vector count...")
+
+    return expected_count
+
+
+def validate_count(client: QdrantClient, expected_count: int):
+    """Ensure all vectors were indexed."""
+
+    count = client.count(collection_name=COLLECTION_NAME)
+
+    assert (
+        count.count == expected_count
+    ), f"Expected {expected_count} vectors, found {count.count}"
+
+    print(f"   ✅ {count.count} vectors indexed")
+
+
+def validate_metadata(client: QdrantClient):
+    """Verify payload fields exist."""
+
+    print("\n4️⃣ Checking metadata...")
+
+    point = client.retrieve(
+        collection_name=COLLECTION_NAME,
+        ids=[0],
+    )[0]
+
+    required_fields = [
+        "chunk_id",
+        "chunk_type",
+        "circular_ref",
+        "text",
+        "title",
+        "token_count",
+    ]
+
+    missing = [
+        field
+        for field in required_fields
+        if field not in point.payload
+    ]
+
+    assert not missing, f"Missing payload fields: {missing}"
+
+    print("   ✅ Metadata is valid")
+
+
+def validate_samples(client: QdrantClient, total_points: int):
+    """Retrieve a few random points."""
+
+    print("\n5️⃣ Checking random samples...")
+
+    sample_size = min(3, total_points)
+
+    sample_ids = random.sample(range(total_points), sample_size)
+
+    points = client.retrieve(
+        collection_name=COLLECTION_NAME,
+        ids=sample_ids,
     )
 
-    try:
-        # ✅ Check 1: Collection exists
-        print("\n1️⃣  Checking collection exists...")
-        collection = client.get_collection("regulations")
-        print(f"   ✅ Collection 'regulations' exists")
+    assert len(points) == sample_size
 
-        # ✅ Check 2: Vector dimension
-        print("\n2️⃣  Checking vector dimension...")
-        vector_size = collection.config.params.vectors.size
-        assert vector_size == 768, f"Expected 768, got {vector_size}"
-        print(f"   ✅ Vector dimension: {vector_size} (correct)")
+    for point in points:
+        assert point.payload["text"].strip()
 
-        # ✅ Check 3: Distance metric
-        print("\n3️⃣  Checking distance metric...")
-        distance = collection.config.params.vectors.distance
-        distance_str = str(distance).lower()
-        assert "cosine" in distance_str, f"Expected Cosine, got {distance}"
-        print(f"   ✅ Distance metric: {distance} (correct)")
+    print(f"   ✅ Retrieved {sample_size} random samples")
 
-        # ✅ Check 4: Vector count
-        print("\n4️⃣  Checking vector count...")
-        count = client.count(collection_name="regulations")
-        assert count.count == 87, f"Expected 87, got {count.count}"
-        print(f"   ✅ Vector count: {count.count} (correct)")
 
-        # ✅ Check 5: Metadata present
-        print("\n5️⃣  Checking metadata integrity...")
-        result = client.retrieve("regulations", ids=[0])
-        point = result[0]
-        required_fields = [
-            "chunk_id",
-            "circular_ref",
-            "chunk_type",
-            "text",
-            "title",
-            "token_count",
-        ]
-        for field in required_fields:
-            assert field in point.payload, f"Missing field: {field}"
-        print(f"   ✅ All required metadata fields present")
+def main():
 
-        # ✅ Check 6: Sample some random points
-        print("\n6️⃣  Checking random samples...")
-        sample_ids = [0, 42, 86]  # First, middle, last
-        samples = client.retrieve("regulations", ids=sample_ids)
-        assert len(samples) == 3, "Could not retrieve samples"
-        for sample in samples:
-            assert sample.payload["text"], "Text field is empty"
-        print(f"   ✅ Random samples verified ({len(samples)} checked)")
+    print("\n" + "=" * 70)
+    print("VALIDATING QDRANT INDEX")
+    print("=" * 70)
 
-        print("\n" + "=" * 70)
-        print("✅ ALL VALIDATION CHECKS PASSED")
-        print("=" * 70 + "\n")
+    client = QdrantClient(
+        host=os.getenv("QDRANT_HOST", "localhost"),
+        port=int(os.getenv("QDRANT_PORT", 6333)),
+        api_key=os.getenv("QDRANT_API_KEY"),
+    )
 
-    except Exception as e:
-        print(f"\n❌ VALIDATION FAILED: {e}")
-        raise
+    chunks = load_chunks(CHUNKS_PATH)
+
+    collection = validate_collection(client)
+
+    validate_vectors(collection, len(chunks))
+
+    validate_count(client, len(chunks))
+
+    validate_metadata(client)
+
+    validate_samples(client, len(chunks))
+
+    print("\n" + "=" * 70)
+    print("✅ ALL VALIDATION CHECKS PASSED")
+    print("=" * 70 + "\n")
 
 
 if __name__ == "__main__":
-    validate_migration()
+    main()

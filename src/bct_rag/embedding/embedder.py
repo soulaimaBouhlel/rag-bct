@@ -4,20 +4,24 @@ MODEL_NAME = "intfloat/multilingual-e5-base"
 
 _model = SentenceTransformer(MODEL_NAME)
 
-def embed(texts):
-    """
-    Accepts string or list[str]
-    Returns normalized embedding
-    """
-    single = isinstance(texts, str)
 
-    if single:
-        texts = [texts]
+def embed(text: str) -> list[float]:
+    if not text.strip():
+        raise ValueError("Cannot embed empty text")
 
-    vectors = _model.encode(
+    return _model.encode(
+        text,
+        normalize_embeddings=True,
+        show_progress_bar=False,
+    ).tolist()
+
+
+def embed_batch(texts: list[str]) -> list[list[float]]:
+    if not texts:
+        return []
+
+    return _model.encode(
         texts,
         normalize_embeddings=True,
-        show_progress_bar=False
-    )
-
-    return vectors[0].tolist() if single else vectors.tolist()
+        show_progress_bar=True,
+    ).tolist()

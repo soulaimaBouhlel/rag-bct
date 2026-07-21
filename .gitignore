@@ -1,33 +1,9 @@
-# Python
-__pycache__/
-*.pyc
-
-# Virtual environment
-.venv/
-
-# IDE
-.idea/
-
-# Outputs (generated files)
-chunks.json
-output.md
-
-# OS
-.DS_Store
-# Chroma database
-data/chroma/
-
-# Generated embeddings
-data/embeddings.json
-
-infrastructure/volumes/*/storage/
-infrastructure/volumes/*/models/
-# Environment
-.env
+cat > .gitignore << 'EOF'
 # ========================================
 # INFRASTRUCTURE & SECRETS
 # ========================================
 
+.env
 .env.local
 .env.*.local
 
@@ -39,6 +15,7 @@ postgres_data/
 # PYTHON
 # ========================================
 
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -63,6 +40,7 @@ MANIFEST
 
 venv/
 env/
+.venv/
 ENV/
 
 # ========================================
@@ -70,9 +48,11 @@ ENV/
 # ========================================
 
 .vscode/
+.idea/
 *.swp
 *.swo
 *~
+.DS_Store
 
 # ========================================
 # TESTING
@@ -81,20 +61,11 @@ ENV/
 .pytest_cache/
 .coverage
 htmlcov/
+benchmark_results.json
 
 # ========================================
-# OLD (TO BE DELETED)
+# PROJECT-SPECIFIC (OLD PIPELINE - DEPRECATED)
 # ========================================
 
 chroma_db/
-
-
-# Local databases
-qdrant_storage/
-benchmark_results.json
-
-
-lancedb_store/
-
-# Logs
-*.log
+EOF
