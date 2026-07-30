@@ -1,0 +1,13 @@
+-r requirements-runtime.txt
+
+docling==2.103.0
+rapidocr==3.8.4
+semchunk==3.2.5
+
+opencv-python==4.13.0.92
+pypdfium2==5.10.1
+
+networkx==3.6.1
+
+pandas==3.0.3
+openpyxl==3.1.5
