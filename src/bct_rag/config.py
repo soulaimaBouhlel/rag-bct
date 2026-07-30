@@ -20,7 +20,7 @@ EMBED_BATCH    = 16          # raise to 32 if RAM allows
 TABLE_NAME     = "bct_regulations"
 
 # ── LLM ──────────────────────────────────────────────────────────────────────
-OLLAMA_MODEL   = "qwen3:4b"
+OLLAMA_MODEL   = "qwen2.5:7b"
 OLLAMA_BASE    = "http://localhost:11434"
 
 # ── Chunking ──────────────────────────────────────────────────────────────────

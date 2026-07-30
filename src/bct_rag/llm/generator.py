@@ -4,10 +4,10 @@ Generate answers from retrieved context using Ollama.
 
 import os
 from ollama import Client
+from src.bct_rag.config import OLLAMA_MODEL, OLLAMA_BASE
 
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
-MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b")
-
+MODEL = os.getenv("OLLAMA_MODEL", OLLAMA_MODEL)
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", OLLAMA_BASE)
 client = Client(
     host=OLLAMA_HOST,
     timeout=300,
