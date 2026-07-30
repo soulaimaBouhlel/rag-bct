@@ -15,12 +15,7 @@ services:
       QDRANT_API_KEY: ${QDRANT_API_KEY:-}
       QDRANT_PREFER_MMAP: "true"
       QDRANT_MAX_INDEXING_THREADS: "0"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6333/collections"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+
     networks:
       - regulations
     logging:
@@ -28,3 +23,24 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+  rag-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: bct-rag-builder
+
+    depends_on:
+      - qdrant
+
+    environment:
+      PYTHONPATH: /app
+
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    networks:
+      - regulations
