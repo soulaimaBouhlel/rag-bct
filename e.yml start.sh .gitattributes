@@ -1,0 +1,53 @@
+[33mcommit 7013bef99b57ee04d90cf0e8ee243bf1a7569311[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/retrieval[m[33m)[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Fri Jul 24 14:16:05 2026 +0100
+
+    add retriever generator and mcp server
+
+[33mcommit 07f84c2fc2550bf989355d94564f4b73af2a1f50[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Tue Jul 21 21:22:27 2026 +0100
+
+    improve index_qdrant logic
+
+[33mcommit ceaa67916a435b72fa69b7358e0f7b56fc8f7c74[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Tue Jul 21 21:02:51 2026 +0100
+
+    add qdrant indexing qdrant validation clean project structure
+
+[33mcommit c46926d8a6e0f57a41bbf41f183477fb5cf4c180[m[33m ([m[1;31morigin/feature/retrieval[m[33m)[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Thu Jul 9 14:45:55 2026 +0100
+
+    Migrate vector storage from ChromaDB to Qdrant
+
+[33mcommit 8c6f348ecfded280e888a064222c7a03dd75fe58[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Mon Jul 6 14:19:57 2026 +0100
+
+    Ignore generated embeddings and Chroma database
+
+[33mcommit a5e15532b5697dc45d24cb91e519219c18d3a555[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/rag-v1[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/rag-v1[m[33m)[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Mon Jul 6 14:09:55 2026 +0100
+
+    Implement Docling ingestion and embedding pipeline
+
+[33mcommit 715c068252cf10431e1c2479be7f1ebd8cddeede[m[33m ([m[1;31morigin/branches/chunker[m[33m, [m[1;32mbranches/chunker[m[33m)[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Tue Jun 23 20:56:49 2026 +0100
+
+    feat(chunker): implement robust semantic PDF chunking with article detection, token counting, and ingestion stability
+
+[33mcommit d2ea922d95d65f7904bc78a8383c5233e19d40fe[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Thu Jun 18 23:41:51 2026 +0100
+
+    Initial commit: ingestion pipeline
+
+[33mcommit 2ac66cdd213fe50c8bc633e1426e638834aa364a[m
+Author: soulaimaBouhlel <soulaimaBouhlel@gitlab.com>
+Date:   Thu Jun 18 23:38:53 2026 +0100
+
+    Initial commit
