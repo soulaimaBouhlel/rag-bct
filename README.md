@@ -1,8 +1,9 @@
 # BCT-RAG
 ### Local Retrieval-Augmented Generation (RAG) System for Banque Centrale de Tunisie Regulations
 
-A local Retrieval-Augmented Generation (RAG) system built during my internship to query Banque Centrale de Tunisie (BCT) regulations through natural language.
-
+Local RAG (Retrieval-Augmented Generation) MCP Server turns your local files into
+an on-demand, private knowledge base for your AI assistant. Unlike cloud services, it
+processes everything locally on your machine, ensuring total data privacy.
 The project performs:
 
 - PDF ingestion
