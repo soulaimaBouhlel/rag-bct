@@ -14,6 +14,10 @@ The project performs:
 - Semantic retrieval
 - Local LLM generation through Ollama
 - MCP server integration for Claude Desktop
+- Parent-Child Retrieval
+- knowledge Graph Builder
+- Graph enhanced Retrieva
+- Automotic External Regulatory Document Retrlieval 
 
 ---
 
