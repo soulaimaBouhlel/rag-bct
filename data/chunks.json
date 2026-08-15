@@ -13,7 +13,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 49,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -31,7 +31,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 222,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-preamble",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -49,7 +49,7 @@
     "article_number": 1,
     "article_label": "premier",
     "token_count": 43,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-article-1",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -67,7 +67,7 @@
     "article_number": 36,
     "article_label": "36",
     "token_count": 33,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-article-36",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -85,7 +85,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 17,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -103,7 +103,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 15,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_01_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -121,7 +121,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 85,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -247,7 +247,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 86,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -265,7 +265,7 @@
     "article_number": 3,
     "article_label": "3",
     "token_count": 304,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-3",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -319,7 +319,7 @@
     "article_number": 5,
     "article_label": "5",
     "token_count": 92,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-5",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -337,7 +337,7 @@
     "article_number": 6,
     "article_label": "6",
     "token_count": 226,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-6",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -355,7 +355,7 @@
     "article_number": 7,
     "article_label": "7",
     "token_count": 68,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-7",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -373,7 +373,7 @@
     "article_number": 8,
     "article_label": "8",
     "token_count": 124,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-8",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -391,7 +391,7 @@
     "article_number": 9,
     "article_label": "9",
     "token_count": 164,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-9",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -409,7 +409,7 @@
     "article_number": 10,
     "article_label": "10",
     "token_count": 164,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-10",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -427,7 +427,7 @@
     "article_number": 11,
     "article_label": "11",
     "token_count": 113,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-11",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -445,7 +445,7 @@
     "article_number": 12,
     "article_label": "12",
     "token_count": 46,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-12",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -463,7 +463,7 @@
     "article_number": 13,
     "article_label": "13",
     "token_count": 89,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-13",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -517,7 +517,7 @@
     "article_number": 15,
     "article_label": "15",
     "token_count": 265,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-15",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -535,7 +535,7 @@
     "article_number": 16,
     "article_label": "16",
     "token_count": 69,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-16",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -553,7 +553,7 @@
     "article_number": 17,
     "article_label": "17",
     "token_count": 108,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-17",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -571,7 +571,7 @@
     "article_number": 18,
     "article_label": "18",
     "token_count": 99,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-18",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -589,7 +589,7 @@
     "article_number": 19,
     "article_label": "19",
     "token_count": 146,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-19",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -607,7 +607,7 @@
     "article_number": 20,
     "article_label": "20",
     "token_count": 19,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-20",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -625,7 +625,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 16,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_02_fr-article-20",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -679,7 +679,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 65,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -697,7 +697,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 317,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-preamble",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -715,7 +715,7 @@
     "article_number": 1,
     "article_label": "premier",
     "token_count": 180,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-article-1",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -733,7 +733,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 147,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -751,7 +751,7 @@
     "article_number": 3,
     "article_label": "3",
     "token_count": 64,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-article-3",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -769,7 +769,7 @@
     "article_number": 4,
     "article_label": "4",
     "token_count": 16,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-article-4",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -787,7 +787,7 @@
     "article_number": 5,
     "article_label": "5",
     "token_count": 34,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_03_fr-article-5",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -805,7 +805,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 58,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -859,7 +859,7 @@
     "article_number": 1,
     "article_label": "premier",
     "token_count": 152,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-1",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -877,7 +877,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 113,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -895,7 +895,7 @@
     "article_number": 3,
     "article_label": "3",
     "token_count": 79,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-3",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -913,7 +913,7 @@
     "article_number": 4,
     "article_label": "4",
     "token_count": 266,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-4",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -931,7 +931,7 @@
     "article_number": 5,
     "article_label": "5",
     "token_count": 19,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-5",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -949,7 +949,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 13,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_04_fr-article-5",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1471,7 +1471,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 68,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1489,7 +1489,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 290,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-preamble",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1507,7 +1507,7 @@
     "article_number": 1,
     "article_label": "premier",
     "token_count": 61,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-article-1",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1525,7 +1525,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 31,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1543,7 +1543,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 14,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -1561,7 +1561,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 343,
-    "parent_chunk": null,
+    "parent_chunk": "Cir_2026_05_fr-annex",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2155,7 +2155,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 21,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_132_fr-annex",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2173,7 +2173,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 304,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_166_ar-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2191,7 +2191,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 70,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_43_fr-header",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2209,7 +2209,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 149,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_43_fr-preamble",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2227,7 +2227,7 @@
     "article_number": 1,
     "article_label": "premier",
     "token_count": 218,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_43_fr-article-1",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2245,7 +2245,7 @@
     "article_number": 2,
     "article_label": "2",
     "token_count": 53,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_43_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   },
@@ -2263,7 +2263,7 @@
     "article_number": null,
     "article_label": "",
     "token_count": 14,
-    "parent_chunk": null,
+    "parent_chunk": "Note_2026_43_fr-article-2",
     "chunk_index": 1,
     "num_chunks": 1
   }
