@@ -247,7 +247,7 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
             article_number=None,
             article_label="",
             token_count=count_tokens(sig_text),
-            parent_chunk=None,
+            parent_chunk=chunk.parent_chunk,
             chunk_index=1,
             num_chunks=1,
         )
@@ -423,7 +423,7 @@ def chunk_markdown(
                 article_number=art_num,
                 article_label=art_label,
                 token_count=count_tokens(part),
-                parent_chunk=parent_id if num_parts > 1 else None,
+                parent_chunk=parent_id,
                 chunk_index=split_idx,
                 num_chunks=num_parts,
             ))

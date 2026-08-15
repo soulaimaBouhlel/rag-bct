@@ -1,5 +1,1 @@
--r requirements-ingestion.txt
-
-pytest
-black
-ruff
+pytest==9.1.1
