@@ -143,8 +143,14 @@ def make_payload(chunk: dict) -> dict:
         "parent_chunk": chunk.get("parent_chunk"),
         "chunk_index": chunk.get("chunk_index"),
         "num_chunks": chunk.get("num_chunks"),
-    }
 
+        # Graph metadata (Phase 2)
+        "annex_number": chunk.get("annex_number"),
+        "references": chunk.get(
+            "references",
+            {"laws": [], "circulars": [], "articles": []},
+        ),
+    }
 
 # ---------------------------------------------------------
 # Point creation

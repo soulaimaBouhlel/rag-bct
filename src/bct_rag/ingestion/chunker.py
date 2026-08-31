@@ -10,9 +10,8 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, List
-
 from transformers import AutoTokenizer
-
+from src.bct_rag.graph.reference_extractor import extract_references
 # ─────────────────────────────
 # TOKENIZER
 # ─────────────────────────────
@@ -51,7 +50,19 @@ def split_tokens(text: str) -> list[str]:
         start = end - OVERLAP
 
     return chunks
+def strip_self_reference(refs: dict, own_circular_ref: str) -> dict:
+    """
+    Remove a chunk's citation of its own circular (e.g. a header that
+    reads "CIRCULAIRE N° 2026-01" matching as if it referenced circular
+    2026-01 — it's naming itself, not citing another document).
+    """
+    return {
+        "laws": refs["laws"],
+        "circulars": [c for c in refs["circulars"] if c != own_circular_ref],
+        "articles": refs["articles"],
+        "annex_number": refs["annex_number"],
 
+    }
 
 # ─────────────────────────────
 # DATA MODEL
@@ -80,6 +91,8 @@ class Chunk:
     chunk_index: int
     num_chunks: int
 
+    references: dict
+    annex_number: Optional[str]
 
 # ─────────────────────────────
 # SIGNATURE POST-PROCESSING
@@ -211,7 +224,18 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
 
         stem = Path(chunk.source_file).stem
 
-        # Create article chunk (body only)
+        # Create article chunk (body only).
+        # article_body still starts with the "Article N" heading line
+        # (extract_signature_from_text only trims the trailing signature),
+        # so strip it before extracting references — same self-reference
+        # issue as in flush().
+        if chunk.chunk_index == 1:
+            refs_source = "\n".join(article_body.split("\n")[1:])
+        else:
+            refs_source = article_body
+
+        body_refs = extract_references(refs_source)
+        body_refs = strip_self_reference(body_refs, chunk.circular_ref)
         article_chunk = Chunk(
             chunk_id=chunk.chunk_id,
             text=article_body,
@@ -229,10 +253,16 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
             parent_chunk=chunk.parent_chunk,
             chunk_index=chunk.chunk_index,
             num_chunks=chunk.num_chunks,
+            references={
+                "laws": body_refs["laws"],
+                "circulars": body_refs["circulars"],
+                "articles": body_refs["articles"],
+            },
+            annex_number=body_refs["annex_number"],
         )
         result.append(article_chunk)
 
-        # Create signature chunk
+        # Create signature chunk (signatures never carry regulatory references)
         sig_chunk = Chunk(
             chunk_id=f"{stem}-signature",
             text=sig_text,
@@ -250,6 +280,8 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
             parent_chunk=chunk.parent_chunk,
             chunk_index=1,
             num_chunks=1,
+            references={"laws": [], "circulars": [], "articles": []},
+            annex_number=None,
         )
         result.append(sig_chunk)
 
@@ -372,8 +404,14 @@ def chunk_markdown(
     current_chapter: Optional[str] = None
     cur_article: Optional[int] = None
     cur_label: str = ""
+    annex_counter: int = 0
 
-    def flush(chunk_type: str, art_num: Optional[int] = None, art_label: str = "") -> None:
+    def flush(
+        chunk_type: str,
+        art_num: Optional[int] = None,
+        art_label: str = "",
+        annex_num: Optional[int] = None,
+    ) -> None:
         """Flush buffered lines."""
         nonlocal buffer
 
@@ -398,7 +436,7 @@ def chunk_markdown(
         if chunk_type == "article" and art_num is not None:
             parent_id = f"{stem}-article-{art_num}"
         elif chunk_type == "annex":
-            parent_id = f"{stem}-annex"
+            parent_id = f"{stem}-annex-{annex_num}" if annex_num else f"{stem}-annex"
         else:
             parent_id = f"{stem}-{chunk_type}"
 
@@ -408,6 +446,27 @@ def chunk_markdown(
                 cid = f"{parent_id}-{split_idx}"
             else:
                 cid = parent_id
+
+            if chunk_type == "article" and split_idx == 1:
+                # Exclude the "Article N" heading line itself, so the
+                # chunk doesn't register a reference to its own article
+                # number (e.g. "Article 1" heading matching as if the
+                # body referenced "article 1" elsewhere).
+                body_for_refs = "\n".join(part.split("\n")[1:])
+            else:
+                body_for_refs = part
+
+            refs = extract_references(body_for_refs)
+            refs = strip_self_reference(refs, circular_ref)
+
+            # Annex numbers come from document order (annex_num, set by
+            # the caller), not from parsing the heading text: OCR'd annex
+            # headings are frequently garbled or missing a number
+            # entirely, so a structural counter is far more reliable.
+            if chunk_type == "annex":
+                resolved_annex_number = str(annex_num) if annex_num is not None else None
+            else:
+                resolved_annex_number = refs["annex_number"]
 
             chunks.append(Chunk(
                 chunk_id=cid,
@@ -426,6 +485,12 @@ def chunk_markdown(
                 parent_chunk=parent_id,
                 chunk_index=split_idx,
                 num_chunks=num_parts,
+                references={
+                    "laws": refs["laws"],
+                    "circulars": refs["circulars"],
+                    "articles": refs["articles"],
+                },
+                annex_number=resolved_annex_number,
             ))
 
     # ─────────────────────────────
@@ -449,7 +514,7 @@ def chunk_markdown(
         # ARTICLE DETECTION
         art = detect_article(line)
         if art:
-            flush(state, cur_article, cur_label)
+            flush(state, cur_article, cur_label, annex_counter)
             state = "article"
             buffer = [line]
             cur_article, cur_label = art
@@ -457,13 +522,13 @@ def chunk_markdown(
 
         # ANNEX DETECTION
         if is_annex(line):
-            flush(state, cur_article, cur_label)
+            flush(state, cur_article, cur_label, annex_counter)
             state = "annex"
+            annex_counter += 1
             buffer = [line]
             cur_article = None
             cur_label = ""
             continue
-
         # PREAMBLE DETECTION
         if state == "header":
             if clean.lower().startswith("vu ") or clean.lower().startswith("décide"):
@@ -476,7 +541,7 @@ def chunk_markdown(
         buffer.append(line)
 
     # Flush remainder
-    flush(state, cur_article, cur_label)
+    flush(state, cur_article, cur_label, annex_counter)
 
     # ─────────────────────────────
     # POST-PROCESSING: Extract signatures
