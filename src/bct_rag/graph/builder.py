@@ -290,3 +290,34 @@ class GraphBuilder:
                 "chunk_id": chunk_id,
             },
         )
+    def link_circular_chunk(
+        self,
+        circular_ref: str,
+        chunk_id: str,
+    ):
+        """
+        Circular -[:REPRESENTED_BY]-> Chunk.
+
+        For header/preamble chunks — these aren't Article/Annex
+        entities, but they're where most law/circular citations
+        actually live, so the Circular itself needs a direct link to
+        them for expand_from_chunk() to surface that context.
+        """
+
+        query = """
+        MATCH (c:Circular {reference: $circular})
+
+        MERGE (chunk:Chunk {id: $chunk_id})
+
+        MERGE (c)-[:REPRESENTED_BY]->(chunk)
+
+        RETURN count(*) AS linked
+        """
+
+        return self.client.execute(
+            query,
+            {
+                "circular": circular_ref,
+                "chunk_id": chunk_id,
+            },
+        )
