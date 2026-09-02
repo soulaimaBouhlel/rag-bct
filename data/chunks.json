@@ -15,7 +15,13 @@
     "token_count": 49,
     "parent_chunk": "Cir_2026_01_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_01_fr-preamble",
@@ -33,7 +39,23 @@
     "token_count": 222,
     "parent_chunk": "Cir_2026_01_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [
+        "2016-35",
+        "2016-48"
+      ],
+      "circulars": [
+        "1986-42",
+        "1991-22"
+      ],
+      "articles": [
+        8,
+        36,
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_01_fr-article-1",
@@ -51,7 +73,13 @@
     "token_count": 43,
     "parent_chunk": "Cir_2026_01_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_01_fr-article-36",
@@ -69,7 +97,13 @@
     "token_count": 33,
     "parent_chunk": "Cir_2026_01_fr-article-36",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_01_fr-article-2",
@@ -87,7 +121,13 @@
     "token_count": 17,
     "parent_chunk": "Cir_2026_01_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_01_fr-signature",
@@ -105,7 +145,13 @@
     "token_count": 15,
     "parent_chunk": "Cir_2026_01_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-header",
@@ -123,7 +169,13 @@
     "token_count": 85,
     "parent_chunk": "Cir_2026_02_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-preamble-1",
@@ -141,7 +193,23 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [
+        "1976-18",
+        "2014-54",
+        "2016-35",
+        "2016-48",
+        "2018-52",
+        "2011-87",
+        "2011-88"
+      ],
+      "circulars": [],
+      "articles": [
+        54
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-preamble-2",
@@ -159,7 +227,23 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-preamble",
     "chunk_index": 2,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [
+        "2015-26"
+      ],
+      "circulars": [
+        "2019-07"
+      ],
+      "articles": [
+        100,
+        107,
+        108,
+        114,
+        140
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-preamble-3",
@@ -177,7 +261,17 @@
     "token_count": 197,
     "parent_chunk": "Cir_2026_02_fr-preamble",
     "chunk_index": 3,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [
+        "2016-35"
+      ],
+      "circulars": [],
+      "articles": [
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-1-1",
@@ -195,7 +289,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-1-2",
@@ -213,7 +313,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-article-1",
     "chunk_index": 2,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-1-3",
@@ -231,7 +337,13 @@
     "token_count": 113,
     "parent_chunk": "Cir_2026_02_fr-article-1",
     "chunk_index": 3,
-    "num_chunks": 3
+    "num_chunks": 3,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-2",
@@ -249,7 +361,13 @@
     "token_count": 86,
     "parent_chunk": "Cir_2026_02_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-3",
@@ -267,7 +385,13 @@
     "token_count": 304,
     "parent_chunk": "Cir_2026_02_fr-article-3",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-4-1",
@@ -285,7 +409,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-article-4",
     "chunk_index": 1,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-4-2",
@@ -303,7 +433,13 @@
     "token_count": 270,
     "parent_chunk": "Cir_2026_02_fr-article-4",
     "chunk_index": 2,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-5",
@@ -321,7 +457,13 @@
     "token_count": 92,
     "parent_chunk": "Cir_2026_02_fr-article-5",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-6",
@@ -339,7 +481,13 @@
     "token_count": 226,
     "parent_chunk": "Cir_2026_02_fr-article-6",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-7",
@@ -357,7 +505,13 @@
     "token_count": 68,
     "parent_chunk": "Cir_2026_02_fr-article-7",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-8",
@@ -375,7 +529,13 @@
     "token_count": 124,
     "parent_chunk": "Cir_2026_02_fr-article-8",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-9",
@@ -393,7 +553,13 @@
     "token_count": 164,
     "parent_chunk": "Cir_2026_02_fr-article-9",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-10",
@@ -411,7 +577,13 @@
     "token_count": 164,
     "parent_chunk": "Cir_2026_02_fr-article-10",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-11",
@@ -429,7 +601,13 @@
     "token_count": 113,
     "parent_chunk": "Cir_2026_02_fr-article-11",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-12",
@@ -447,7 +625,13 @@
     "token_count": 46,
     "parent_chunk": "Cir_2026_02_fr-article-12",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-13",
@@ -465,7 +649,17 @@
     "token_count": 89,
     "parent_chunk": "Cir_2026_02_fr-article-13",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": [
+        8,
+        9,
+        4
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-14-1",
@@ -483,7 +677,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_02_fr-article-14",
     "chunk_index": 1,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-14-2",
@@ -501,7 +701,13 @@
     "token_count": 151,
     "parent_chunk": "Cir_2026_02_fr-article-14",
     "chunk_index": 2,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-15",
@@ -519,7 +725,13 @@
     "token_count": 265,
     "parent_chunk": "Cir_2026_02_fr-article-15",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-16",
@@ -537,7 +749,13 @@
     "token_count": 69,
     "parent_chunk": "Cir_2026_02_fr-article-16",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-17",
@@ -555,7 +773,18 @@
     "token_count": 108,
     "parent_chunk": "Cir_2026_02_fr-article-17",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [
+        "2015-26"
+      ],
+      "circulars": [],
+      "articles": [
+        137,
+        15
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-18",
@@ -573,7 +802,13 @@
     "token_count": 99,
     "parent_chunk": "Cir_2026_02_fr-article-18",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-19",
@@ -591,7 +826,13 @@
     "token_count": 146,
     "parent_chunk": "Cir_2026_02_fr-article-19",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-article-20",
@@ -609,7 +850,13 @@
     "token_count": 19,
     "parent_chunk": "Cir_2026_02_fr-article-20",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_02_fr-signature",
@@ -627,10 +874,16 @@
     "token_count": 16,
     "parent_chunk": "Cir_2026_02_fr-article-20",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
-    "chunk_id": "Cir_2026_02_fr-annex-1",
+    "chunk_id": "Cir_2026_02_fr-annex-1-1",
     "text": "## Annexe à la circulaire aux bureaux de change n°2026-2 du 23 janvier 2026 ## ELEMENTS D'IDENTIFICATION DU CLIENT ## I- Personne physique : - -Nom et prénom - -Date et lieu de naissance - -État civil - -Nationalité - -Numéro du CNI ou numéro de passeport ou de la carte de séjour avec date d'émission et date d'expiration de la validité - -Adresse officielle - -Profession exercée - -Employeur - -Les revenus ou tout élément permettant d'estimer les autres ressources - -Identité du ou des bénéficiaires effectifs ## II- Personne morale : - -Dénomination ou raison sociale - -Adresse du siège social - -Forme juridique - -Nature d'activité - -Identifiant au Registre National des Entreprises - -Nom du représentant légal ou de la personne agissant au nom du client - -Principaux actionnaires ou associés - -Mandats et pouvoirs - -Tout élément permettant d'apprécier la situation financière notamment les états financiers et le cas échéant les rapports des commissaires aux comptes - -Identité du ou des bénéficiaires effectifs ## III- Associations - -Nom de l'association - -L'adresse du siège principal - -Identifiant au Registre National des Entreprises - -Noms et prénoms des personnes habilitées à réaliser des opérations financières et les numéros de leurs CNI - -Les statuts et la référence de l'extrait du JORT relatif à la constitution de l'",
     "source_file": "Cir_2026_02_fr.pdf",
     "circular_ref": "2026-02",
@@ -643,12 +896,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_02_fr-annex",
+    "parent_chunk": "Cir_2026_02_fr-annex-1",
     "chunk_index": 1,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_02_fr-annex-2",
+    "chunk_id": "Cir_2026_02_fr-annex-1-2",
     "text": "tifiant au Registre National des Entreprises - -Noms et prénoms des personnes habilitées à réaliser des opérations financières et les numéros de leurs CNI - -Les statuts et la référence de l'extrait du JORT relatif à la constitution de l'association - -Tout élément permettant d'apprécier la situation financière notamment les états financiers et le cas échéant les rapports des commissaires aux comptes - -Identité du ou des bénéficiaires effectifs ## IV- Pour les partis politiques - -L'adresse du siège principal - -Liste des membres des bureaux exécutifs et les numéros de leurs CNI - -Les statuts - -Identifiant au Registre National des Entreprises - -L'extrait du JORT afférent à la constitution - -Tout élément permettant d'apprécier la situation financière notamment les états financiers et les rapports des Commissaires aux comptes. - -Déclaration sur l'honneur attestant que le parti concerné ne détient pas d'autres comptes bancaires ou postaux (en application de l'article 22 du décret-loi n°2011-87) - -Identité du ou des bénéficiaires effectifs. ## V- Pour les constructions juridiques : - -Dénomination - -Adresse - -Certificat de constitution ou tout acte créant le trust - -Nature d'activité - -Pouvoirs qui régissent la construction juridique - -Noms des responsables occupant les fonctions de direction (Trustee) - -Résidence du trustee - -Identité du ou des bénéficiaires effectifs",
     "source_file": "Cir_2026_02_fr.pdf",
     "circular_ref": "2026-02",
@@ -661,9 +920,19 @@
     "article_number": null,
     "article_label": "",
     "token_count": 359,
-    "parent_chunk": "Cir_2026_02_fr-annex",
+    "parent_chunk": "Cir_2026_02_fr-annex-1",
     "chunk_index": 2,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [
+        "2011-87"
+      ],
+      "circulars": [],
+      "articles": [
+        22
+      ]
+    },
+    "annex_number": "1"
   },
   {
     "chunk_id": "Cir_2026_03_fr-header",
@@ -681,7 +950,13 @@
     "token_count": 65,
     "parent_chunk": "Cir_2026_03_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-preamble",
@@ -699,7 +974,26 @@
     "token_count": 317,
     "parent_chunk": "Cir_2026_03_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [
+        "2016-35",
+        "2016-48"
+      ],
+      "circulars": [
+        "2018-06",
+        "2021-05"
+      ],
+      "articles": [
+        7,
+        8,
+        18,
+        63,
+        66,
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-article-1",
@@ -717,7 +1011,13 @@
     "token_count": 180,
     "parent_chunk": "Cir_2026_03_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-article-2",
@@ -735,7 +1035,19 @@
     "token_count": 147,
     "parent_chunk": "Cir_2026_03_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [
+        "2018-06"
+      ],
+      "articles": [
+        50,
+        51,
+        52
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-article-3",
@@ -753,7 +1065,13 @@
     "token_count": 64,
     "parent_chunk": "Cir_2026_03_fr-article-3",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-article-4",
@@ -771,7 +1089,13 @@
     "token_count": 16,
     "parent_chunk": "Cir_2026_03_fr-article-4",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_03_fr-article-5",
@@ -789,7 +1113,13 @@
     "token_count": 34,
     "parent_chunk": "Cir_2026_03_fr-article-5",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-header",
@@ -807,7 +1137,13 @@
     "token_count": 58,
     "parent_chunk": "Cir_2026_04_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-preamble-1",
@@ -825,7 +1161,21 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_04_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [
+        "2011-98",
+        "2016-35",
+        "2016-48"
+      ],
+      "circulars": [
+        "2025-13"
+      ],
+      "articles": [
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-preamble-2",
@@ -843,7 +1193,17 @@
     "token_count": 63,
     "parent_chunk": "Cir_2026_04_fr-preamble",
     "chunk_index": 2,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [
+        "2016-35"
+      ],
+      "circulars": [],
+      "articles": [
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-article-1",
@@ -861,7 +1221,13 @@
     "token_count": 152,
     "parent_chunk": "Cir_2026_04_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-article-2",
@@ -879,7 +1245,13 @@
     "token_count": 113,
     "parent_chunk": "Cir_2026_04_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-article-3",
@@ -897,7 +1269,13 @@
     "token_count": 79,
     "parent_chunk": "Cir_2026_04_fr-article-3",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-article-4",
@@ -915,7 +1293,13 @@
     "token_count": 266,
     "parent_chunk": "Cir_2026_04_fr-article-4",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-article-5",
@@ -933,7 +1317,13 @@
     "token_count": 19,
     "parent_chunk": "Cir_2026_04_fr-article-5",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_04_fr-signature",
@@ -951,10 +1341,16 @@
     "token_count": 13,
     "parent_chunk": "Cir_2026_04_fr-article-5",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-1",
+    "chunk_id": "Cir_2026_04_fr-annex-1-1",
     "text": "## AnnexealaCirculaireauxintermediairesagreesn°2026-4du26mars2026 liste desproduits | ash4 | NGB | RBELCE | RBELCE | |-----------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------| | 8703 | 8703 | Voituresdetourismeetautresvehiculesautomobilesprincipalementconcus pourle transportdepersonnes | Voituresdetourismeetautresvehiculesautomobilesprincipalementconcus pourle transportdepersonnes | | 61 | 61alexclusion de611790 | Vetementsetaccessoiresduvetement,cnbonneterie | Vetementsetaccessoiresduvetement,cnbonneterie | | 62 | 62alexclusion de621790 | Vetementsetaccessoiresduvetement,autresqu'enbonneterie | Vetementsetaccessoiresduvetement,autresqu'enbonneterie | | 0305 | 030541 | Poissonsfumesycomprislesfilets,autresquelesabatsdepoissonscomestibles | Poissonsfumesycomprislesfilets,autresquelesabatsdepoissonscomestibles | | 0406 | 040640 | Fromagesapatepersillee etautresfromages presentantdesmarbrures obtenues enutilisant dupenicilliumroqueforti | Fromagesapatepersillee etautresfromages presentant",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -967,12 +1363,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 1,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-2",
+    "chunk_id": "Cir_2026_04_fr-annex-1-2",
     "text": "ibles | | 0406 | 040640 | Fromagesapatepersillee etautresfromages presentantdesmarbrures obtenues enutilisant dupenicilliumroqueforti | Fromagesapatepersillee etautresfromages presentantdesmarbrures obtenues enutilisant dupenicilliumroqueforti | | 0406 | 040620 | Fromagesrapesouenpoudre,detoustypes | Fromagesrapesouenpoudre,detoustypes | | 0409 | 040900 | Miclnaturel | Miclnaturel | | 0603 | 0603 | Fleursetboutonsdefleurs,coupes,pourbouquetsoupourornements,frais,seches,blanchis,teints,impregnesouautrementprepares | Fleursetboutonsdefleurs,coupes,pourbouquetsoupourornements,frais,seches,blanchis,teints,impregnesouautrementprepares | | 0801 | 0801 | Noix decoco,noixdubresiletnoixdecajou,fraiches ouseches,memesansleurscoques ou decortiquees | Noix decoco,noixdubresiletnoixdecajou,fraiches ouseches,memesansleurscoques ou decortiquees | | 0802 | 080212 | Amandessans coques | Amandessans coques | | 0802 ",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -985,12 +1387,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 2,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-3",
+    "chunk_id": "Cir_2026_04_fr-annex-1-3",
     "text": "siletnoixdecajou,fraiches ouseches,memesansleurscoques ou decortiquees | | 0802 | 080212 | Amandessans coques | Amandessans coques | | 0802 | 080252 | Pistachessanscoques | Pistachessanscoques | | 0802 | 080251 | Pistaches | Pistaches | | 0803 | 080390 | Bananesfraichesouseches | Bananesfraichesouseches | | 0804 | 080440 | Avocats,fraisousecs | Avocats,fraisousecs | | 0804 | 080430 | Ananas | Ananas | | 0804 0804 | 080420 | Figues,fraichesousechees | Figues,fraichesousechees | | | 080450 | Goyaves,mangues etmangoustans | Goyaves,mangues etmangoustans | | 0806 | 080620 | Raisinssecs | Raisinssecs | | 0806 0807 | 080610 080719 | Raisinsfrais Melons | Raisinsfrais Melons | | 0807 | 080711 | | | | 0810 | 081050 | Pasteques Kiwis,frais | Pasteques Kiwis,frais | | 0810 | 81090 ",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1003,12 +1411,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 359,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 3,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-4",
+    "chunk_id": "Cir_2026_04_fr-annex-1-4",
     "text": "is Melons | | 0807 | 080711 | | | | 0810 | 081050 | Pasteques Kiwis,frais | Pasteques Kiwis,frais | | 0810 | 81090 | Tamarins,pommesdecajou,fruitsdujaquier(paindessinges),litchis,sapotilles,fruitsdelapassion,carambolesetpitahayasetautresfruits,frais | Tamarins,pommesdecajou,fruitsdujaquier(paindessinges),litchis,sapotilles,fruitsdelapassion,carambolesetpitahayasetautresfruits,frais | | 0810 | 081070 | Kakis(fruit du plaquerminier),frais | Kakis(fruit du plaquerminier),frais | | 0811 | 081120 | | | | 1206 | 120600 | Framboises,muresderonceoudemurier,muresframboisesetgroseiltesagrappesouamaquereau | Framboises,muresderonceoudemurier,muresframboisesetgroseiltesagrappesouamaquereau | | 1604 | 160414 | Graines de tournesol,meme concassees Thons,listaos et bonites(sarda spp.) | Graines de tournesol,meme concassees Thons,listaos et bonites(sarda spp.) | | 1605",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1021,12 +1435,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 4,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-5",
+    "chunk_id": "Cir_2026_04_fr-annex-1-5",
     "text": "nesol,meme concassees Thons,listaos et bonites(sarda spp.) | Graines de tournesol,meme concassees Thons,listaos et bonites(sarda spp.) | | 1605 | 1605 | Crustacesmollusquesetautresinvertebresaquatiquespreparesouconserves | Crustacesmollusquesetautresinvertebresaquatiquespreparesouconserves | | 1704 | 1704 | Sucreriessanscacao(ycompris lechocolatblanc) | Sucreriessanscacao(ycompris lechocolatblanc) | | 1806 | 069081 | Autreschocolatet autres preparations alimentairescontenant ducacao | Autreschocolatet autres preparations alimentairescontenant ducacao | | 1806 | 180631 | Autreschocolatetautrespreparationsalimentairescontenantducacaopresentesentablettesbarresoubtons,fourres | Autreschocolatetautrespreparationsalimentairescontenantducacaopresentesentablettesbarresoubtons,fourres | | 1806 | 180632 | Autreschocolatetautrespreparations alimentairescontenantducacao presentesentablettes,barresoubatons,nonfourres | Autreschocolatetautrespreparations alimentairescontenantducacao presentesentablettes,barresoubatons,nonfourres | | 1902 | 1902 | Pstesalmentairesme",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1039,12 +1459,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 5,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-6",
+    "chunk_id": "Cir_2026_04_fr-annex-1-6",
     "text": "tablettes,barresoubatons,nonfourres | Autreschocolatetautrespreparations alimentairescontenantducacao presentesentablettes,barresoubatons,nonfourres | | 1902 | 1902 | Pstesalmentairesmemecuitsoufrciesdeviandeoudutressubstancesoubienatrmentrepareestllesqupaghettmacaroniouillesasagnesocchiraviolcannelonicouscousemeprar | Pstesalmentairesmemecuitsoufrciesdeviandeoudutressubstancesoubienatrmentrepareestllesqupaghettmacaroniouillesasagnesocchiraviolcannelonicouscousemeprar | | 1904 | 1904 | semoule)precuitesouautrementpreparees,nondenommeesnicomprisesailleurs | semoule)precuitesouautrementpreparees,nondenommeesnicomprisesailleurs | | 1905 | | Autresproduitsdela boulangerie,delapatisserieoudelabiscuiterie | Autresproduitsdela boulangerie,delapatisserieoudelabiscuiterie | | 1905 | 190590 | | | | 1905 | 190531 190532 | Biscuits additionnes d'edulcorants;gaufreset gaufrettes Gaufresetgaufrettes | Biscuits additionnes d'edulcorants;gaufreset gaufrettes Gaufresetgaufrettes | | 1905 | 190540 | Biscottes,paingrilleet",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1057,12 +1483,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 6,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-7",
+    "chunk_id": "Cir_2026_04_fr-annex-1-7",
     "text": "corants;gaufreset gaufrettes Gaufresetgaufrettes | Biscuits additionnes d'edulcorants;gaufreset gaufrettes Gaufresetgaufrettes | | 1905 | 190540 | Biscottes,paingrilleetproduitssimilairesgrilles | Biscottes,paingrilleetproduitssimilairesgrilles | | 2001 | 2001 | Legumes,fruitsetautrespartiescomestiblesdeplantespreparesouconservesauvinaigreouaacideacetique | | | 2003 | 2003 2004 | Champignonset truffes,preparesouconserves autrementqu'auvinaigreoualacideacetique Autreslegumespreparesouconservesautrementquauvinaigreoualacideacetique,congeles,autresquelesproduitsdun0.06 | | | 2004 | 2006 | | 2006 | | 2008 | 2008 | Fruitsetautrespartiescomestiblesdeplantes,autrementpreparesouconserves,avecousans additiondesucreoudautresedulcorantsoud'alcool | | | 2103 | 2103 | Preparationspour saucesetsaucespreparees;condimentsetassaisonnements,composes;farinedemoutardeetmoutardepreparee | | | 2104 | 21n4 | Preparationspoursoupespotagesoubouillonssoupespotagesoubouillonspreparespreparationsalmentairescompositeshomogenfise",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1075,12 +1507,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 7,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-8",
+    "chunk_id": "Cir_2026_04_fr-annex-1-8",
     "text": ";farinedemoutardeetmoutardepreparee | | | 2104 | 21n4 | Preparationspoursoupespotagesoubouillonssoupespotagesoubouillonspreparespreparationsalmentairescompositeshomogenfisees | | | 2201 | 2105 | Glacesdeconsommation,memecontenantducacao | 2105 | | | 2201 | | | Vermouthsetautresvinsderaisinsfraispreparesal'aidedeplantesoudesubstancesaromatiquesenrecipientsd'unecontenancen'excedantpas21 Repud <!-- image --> | NGP | LIBELLE | | |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| | nsh4 2202 220210 | Eaux,ycomprisleseauxmineralesetleseauxgazeifiees,additionneesdesucreoudautresedulcorantsouaromatisees | | | 2203 220300 | Bieresdemalt | | | 2204 220421 | | Autresvins;moutsderaisindontlafermentationaeteempecheeouarreteeparadditiond'alcool | | 2204 220410 | | Vinsmousseuxproduitsapartirderaisinsfrais | | 2205 | 220510 | | | 2206 220600",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1093,12 +1531,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 8,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-9",
+    "chunk_id": "Cir_2026_04_fr-annex-1-9",
     "text": "pecheeouarreteeparadditiond'alcool | | 2204 220410 | | Vinsmousseuxproduitsapartirderaisinsfrais | | 2205 | 220510 | | | 2206 220600 | Autresboissonsfermentees(cidre,poire,hydromel,sake,parexemple);melangesdeboissonsfermenteesetmelangesdeboissonsfermenteesetdeboissonsnonalcooliquesnondenommesnicomprisaillurs | | | 2208 220860 | | Vodka | | 2208 220830 | Whiskies | | | 2208 | 220870 Liqueurs | | | 2208 | 220850 Ginetgenievre | | | 2208 | 220840 | Rhumetautreseauxdevieprovenantdela distillation,apresfermentation,deproduitsdecanneasucre | | 2208 | 220820 Eauxdeviedevinoudemarcderaisin | | | 3303 3304 | 330300 330499 Autresproduitsdebeauteoudemaquillage | Parfumseteauxdetoilette | | 3304 | 330410 | Produitsdemaquillagepourleslevres | | 3304 | 330420 | Produitsdemaquillagepourlesyeux | | 3304 | | Poudres,ycomprislespoudrescompactes | | 3",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1111,12 +1555,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 9,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-10",
+    "chunk_id": "Cir_2026_04_fr-annex-1-10",
     "text": "itsdemaquillagepourleslevres | | 3304 | 330420 | Produitsdemaquillagepourlesyeux | | 3304 | | Poudres,ycomprislespoudrescompactes | | 3304 | 330491 | Preparationspourmanucuresoupedicures | | 3305 | 330430 | Autresproduitscapilaires | | | 330590 | | | 3305 | 330510 Preparationspour'ondulationouledefrisagepermanents | Shampooings | | 3305 3305 | 330520 330530 | Laquespourcheveux | | 3306 | 330610 | Dentifrices | | | | Autrespreparationspourl'hygienebuccaleou dentaire | | 3306 | 330690 | Desodorisantscorporelset antisudoraux | | 3307 | 330720 | Preparationspourleprerasage,lerasageoul'apresrasage | | 3307 | 330710 | | | 3307 | 330730 | Selsparfumesetautrespreparationspourbains Produitsetpreparationsorganiquestensioactifsdestinesaulavagedelapeau,sousformedeliquideoudecreme,conditionnespourlaventeaudetailmemecontenantdusavon | | 3401 3402 | 340130 | | | | 340250",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1129,12 +1579,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 10,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-11",
+    "chunk_id": "Cir_2026_04_fr-annex-1-11",
     "text": "organiquestensioactifsdestinesaulavagedelapeau,sousformedeliquideoudecreme,conditionnespourlaventeaudetailmemecontenantdusavon | | 3401 3402 | 340130 | | | | 340250 340290 | | | 3402 | | Preparationstensio-activesreparationsoulssivesetrparatinsdenettyagenonconditionnesoulenteutil | | 3923 | 39239000990 Autresarticlesdemenageoud'economiedomestiqueetarticlesd'hygieneoudetoilette,enmatieresplastiques | Autresarticlesdetransportoud'emballage,enmatieresplastiques | | 3924 3924 | 392490 392410 392640 | Vaisselleetautresarticlespourleservicedelatableoudelacuisine Statuettesetautresobjetsd'ornementation | | 3926 | | Pneumatiquesneufs,encaoutchoucdestypesutilisespourmotocycles | | 4011 | | Pneumatiquesneufs,encaoutchoucdestypes utilisespourbicyclettes: | | | 401140 401150 | | | 4011 | | Sacamainasurfaceexterieureenfeuillesdematieresplastiquesouenmatierestextiles | | 4202 | | | | 4202 | 420292 420222 | Sacsamain,as",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1147,12 +1603,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 11,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-12",
+    "chunk_id": "Cir_2026_04_fr-annex-1-12",
     "text": "4011 | | Sacamainasurfaceexterieureenfeuillesdematieresplastiquesouenmatierestextiles | | 4202 | | | | 4202 | 420292 420222 | Sacsamain,asurfaceexterieureenfeuillesdematieresplastiquesouenmatierestextiles Sacsamainasurfaceexterieureenfeuillesdematieresplastiquesouenmatierestextiles | | 4202 4202 | 420232 | Autressacsdevoyages,troussesdetoilette,sacspourarticlesdesport,etuis..enautresmatieres. | | 4202 | 420299 420221 | Sacsamain,memeabandouliere,ycomprisceuxsanspoignee fique | | | 420231 | articlesdepocheoudesacamainasurfaceexterieureencuirnaturel,encuirreconstitue | | 4202 | | Enveloppes | | 4817 4817 | 481710 | Boitesochettesetresentationssimilairesenpapieroucartonrenfermantunssortmentdarticlesdecorrespondance | | 4818 | 481730 | Mouchoirs,serviettesademaquilleretessuiemains | | 4818 | 481820 481810 | Papierhygienique Nappesetserviettesdetable | | 4818 | | | | 4819 | 481830",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1165,12 +1627,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 12,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-13",
+    "chunk_id": "Cir_2026_04_fr-annex-1-13",
     "text": "s,serviettesademaquilleretessuiemains | | 4818 | 481820 481810 | Papierhygienique Nappesetserviettesdetable | | 4818 | | | | 4819 | 481830 481940 | Autressacs;sachets,pochettes(autresquecellespourdisques)etcornets Boitesetcaissesenpapieroucartonondule | | 4819 | | Autresemballages,ycomprislespochettespourdisques | | 4819 | 481910 481950 | Sacsdunelargeuralabasede40cmouplus | | 4819 | 481930 481960 | Cartonnagesdebureau,demagasinousimilaires | | 4819 | | | <!-- image --> | nsh4 | NGP | LIBELLE | | |-----------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------| | 4820 | 482010 | Registres,livrescomptables,carnets(denotes,decommandes,dequittances),blocs-memorandums,blocsdepapieralettres,agendasetouvragessimilaires | Registres,livrescomptables,carnets(denotes,decommandes,dequittances),blocs-memorandums,blocsdepapieralettres,agendasetouvragessimilaires ",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1183,12 +1651,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 359,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 13,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-14",
+    "chunk_id": "Cir_2026_04_fr-annex-1-14",
     "text": "lettres,agendasetouvragessimilaires | Registres,livrescomptables,carnets(denotes,decommandes,dequittances),blocs-memorandums,blocsdepapieralettres,agendasetouvragessimilaires | | 4820 | 482020 | Cahiers | Cahiers | | 4820 | 482090 | Sousmainsetautresarticlesscolaires,debureauoudepapeterie,ycomprislescouverturespourlivres,enpapieroucarton | Sousmainsetautresarticlesscolaires,debureauoudepapeterie,ycomprislescouverturespourlivres,enpapieroucarton | | 4820 | 482030 | Classeurs,reliures(autresquelescouverturespourlivres),chemisesetcouverturesadossiers | Classeurs,reliures(autresquelescouverturespourlivres),chemisesetcouverturesadossiers | | 4820 | 482050 | Albumspourechantillonnagesoupourcollections | Albumspourechantillonnagesoupourcollections | | 4820 | 482040 | Liassesetcarnetsmanifold,memecomportantdesfeuillesdepapiercarbone | Liassesetcarnetsmanifold,memecomportantdesfeuillesdepapiercarbone | | 4823 | 482369 | Plateaux,platsassiettes,tassesgobeletsetarticlessimilairesnpapieroucarton(",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1201,12 +1675,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 14,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-15",
+    "chunk_id": "Cir_2026_04_fr-annex-1-15",
     "text": "| Liassesetcarnetsmanifold,memecomportantdesfeuillesdepapiercarbone | | 4823 | 482369 | Plateaux,platsassiettes,tassesgobeletsetarticlessimilairesnpapieroucarton(autresquenbombou) | Plateaux,platsassiettes,tassesgobeletsetarticlessimilairesnpapieroucarton(autresquenbombou) | | 4823 | 482361 | Plateaux,plats,assiettes,tasses,gobeletsetarticlessimilaires,enbombou | Plateaux,plats,assiettes,tasses,gobeletsetarticlessimilaires,enbombou | | 5701 | 5701 | Tapisenmatierestextiles,apointsnouesouenroules,memeconfectionnes | Tapisenmatierestextiles,apointsnouesouenroules,memeconfectionnes | | 5703 | 5703 | | | | 6301 | 6301 | Couvertures | Couvertures | | 6302 | 6302 | Lingedelit,detable,detoiletteoudecuisine | Lingedelit,detable,detoiletteoudecuisine | | 6303 | 6303 | Vitrages,rideauxetstoresdinterieur;cantonnieresettoursdelits | Vitrages,rideauxetstoresdinterieur;cantonnieresettoursdelits | | 6304 | 6",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1219,12 +1699,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 361,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 15,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-16",
+    "chunk_id": "Cir_2026_04_fr-annex-1-16",
     "text": "| 6303 | 6303 | Vitrages,rideauxetstoresdinterieur;cantonnieresettoursdelits | Vitrages,rideauxetstoresdinterieur;cantonnieresettoursdelits | | 6304 | 6304 | Autresarticlesd'ameublement,al'exclusiondeceuxdun°94.04 | Autresarticlesd'ameublement,al'exclusiondeceuxdun°94.04 | | 6305 | 6305 | Sacsetsachetsd'emballage(1) | Sacsetsachetsd'emballage(1) | | 6306 | 6306 | | | | 6307 | 630790 | Autresarticlesconfectionnes,ycomprislespatronsdevetements | Autresarticlesconfectionnes,ycomprislespatronsdevetements | | 6307 | 630710 | Serpillieresouwassingues,lavettes,chamoisettesetarticlesd'entretiensimilaires | Serpillieresouwassingues,lavettes,chamoisettesetarticlesd'entretiensimilaires | | 6310 | 6310 | Chiffons,ficelles,cordesetcordages,enmatierestextiles,sousformededechetsoudarticleshorsdusage | Chiffons,ficelles,cordesetcordages,enmatierestextiles,sousformededechetsoudarticleshorsdusage | | 6402 | 6402 | Autreschaussu",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1237,12 +1723,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 361,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 16,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-17",
+    "chunk_id": "Cir_2026_04_fr-annex-1-17",
     "text": "chetsoudarticleshorsdusage | Chiffons,ficelles,cordesetcordages,enmatierestextiles,sousformededechetsoudarticleshorsdusage | | 6402 | 6402 | Autreschaussuresasemellesexterieuresetdessusencaoutchoucouenmatiereplastique | Autreschaussuresasemellesexterieuresetdessusencaoutchoucouenmatiereplastique | | 6403 | 6403 | Chaussuresasemellesexterieuresencaoutchouc,matiereplastique,cuirnatureloureconstitueetdessusencuirnaturel | Chaussuresasemellesexterieuresencaoutchouc,matiereplastique,cuirnatureloureconstitueetdessusencuirnaturel | | 6404 | 6404 | Chaussuresasemellesexterieuresencaoutchouc,matiereplastique,cuirnatureloureconstitueetdessusenmatierestextiles | Chaussuresasemellesexterieuresencaoutchouc,matiereplastique,cuirnatureloureconstitueetdessusenmatierestextiles | | 6405 | 6405 | Autreschaussures | Autreschaussures | | 6802 | 680292 | Autrespierrescalcaires | Autrespierrescalcaires | | 6802 | 680293 | Granitetouvragesengranit,autrementtravailles | Granitetouvragesengranit,autrementtravailles | |",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1255,12 +1747,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 17,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-18",
+    "chunk_id": "Cir_2026_04_fr-annex-1-18",
     "text": "| Autrespierrescalcaires | Autrespierrescalcaires | | 6802 | 680293 | Granitetouvragesengranit,autrementtravailles | Granitetouvragesengranit,autrementtravailles | | 6802 | 680221 | Autrespierresdetailleoudeconstructionetouvragesencespierres,simplementtaillesousciesetasurfaceplaneouunie | Autrespierresdetailleoudeconstructionetouvragesencespierres,simplementtaillesousciesetasurfaceplaneouunie | | 6802 | 680223 | Granitetouvragesengranit,simplementtaillesousciesetasurfaceplaneouunie | Granitetouvragesengranit,simplementtaillesousciesetasurfaceplaneouunie | | 6802 | 680299 | Autrespierres | Autrespierres | | 6802 | 680291 | Autresouvragesen marbre,travertinetalbatre | Autresouvragesen marbre,travertinetalbatre | | 6802 | 680229 | Autrespierres | Autrespierres | | 6804 | 680410 | Meulesamoudreouadefibrer | Meulesamoudreouadefibrer | | 6804 | 68042230903 | Autresmeulesetarticlessimilairesetleursparties,sansbatis,enabrasifsartificiels,avecagglomerantensilicates.",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1273,12 +1771,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 361,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 18,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-19",
+    "chunk_id": "Cir_2026_04_fr-annex-1-19",
     "text": "amoudreouadefibrer | | 6804 | 68042230903 | Autresmeulesetarticlessimilairesetleursparties,sansbatis,enabrasifsartificiels,avecagglomerantensilicates. | Autresmeulesetarticlessimilairesetleursparties,sansbatis,enabrasifsartificiels,avecagglomerantensilicates. | | 6804 | 68042250901 | Autresmeulesetarticlessimilairesetleursparties,sansbatis,enabrasifsartificiels,avecagglomerantenautresmatieres | | | 6805 | 68052000000 | Abrasifsnaturelsouartificielsenpoudreouengrainsappliquessurpapieroucartonseulement,memedecoupes,coususouautrementassembles | Abrasifsnaturelsouartificielsenpoudreouengrainsappliquessurpapieroucartonseulement,memedecoupes,coususouautrementassembles | | 6910 | 691090 | Eviersavaboscolonnesdelavabosbaignoiresbidts,cuvettesdaisanceeservoirdechasse,urinoirsetappareilsfixessimilairesourusagessanitairesncramique(autrequlaporcelain | Eviersavaboscolonnesdelavabosbaignoiresbidts,cuvettesdaisanceeservoirdechasse,urinoirsetappareilsfixessimilairesourusagessanitairesncramique(autre",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1291,12 +1795,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 19,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-20",
+    "chunk_id": "Cir_2026_04_fr-annex-1-20",
     "text": "ique(autrequlaporcelain | Eviersavaboscolonnesdelavabosbaignoiresbidts,cuvettesdaisanceeservoirdechasse,urinoirsetappareilsfixessimilairesourusagessanitairesncramique(autrequlaporcelain | | 6910 | 691010 | Eviersavaboscolonnesdlavabosbaignoiresbidetscuvettesdaisanceservoirdehasseurinoirsetappareilsfixessimilairesourusagesanitairesnporcelan | Eviersavaboscolonnesdlavabosbaignoiresbidetscuvettesdaisanceservoirdehasseurinoirsetappareilsfixessimilairesourusagesanitairesnporcelan | | 6911 | 691110 691190 | Articlespourleservicedelatableoudelacuisine,enporcelaine Autresvaisselle,articlesdemenageoud'economiedomestiquesetarticlesd’hygieneoudetoilette,enporcelaine* | Articlespourleservicedelatableoudelacuisine,enporcelaine Autresvaisselle,articlesdemenageoud'economiedomestiquesetarticlesd’hygieneoudetoilette,enporcelaine* | | 6911 | | Vaisselle,autresarticlesdemenageoudeconomiedomestiqueetarticlesd'hygieneoudetoilette,enceramique,autresqu'enporcelaine | Vaisselle,autresarticlesdemena",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1309,12 +1819,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 361,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 20,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-21",
+    "chunk_id": "Cir_2026_04_fr-annex-1-21",
     "text": "| 6911 | | Vaisselle,autresarticlesdemenageoudeconomiedomestiqueetarticlesd'hygieneoudetoilette,enceramique,autresqu'enporcelaine | Vaisselle,autresarticlesdemenageoudeconomiedomestiqueetarticlesd'hygieneoudetoilette,enceramique,autresqu'enporcelaine | | 6912 6913 | 691200 | | | | 6914 | 6913 | Statuettesetautresobjetsd'ornementationenceramique | Statuettesetautresobjetsd'ornementationenceramique | | | 691410 | Autresouvragesenporcelaine | Autresouvragesenporcelaine | | 7013 | 701349 | Autresobjetspourleservicedelatableoupourlacuisine,autresqu'envitrocerame | Tunisienne | | 7013 | 701337 | autresverresaboire,autresqu'envitrocerame | | | 7013 | 701328 | Autresverresaboireapied,autresqu'envitrocerame | | | 7013 | 701342 | Repy Objetspourleservicedelatableoupourlacuisine,enverred'uncoefficientdedilatationlineairen'excedantpas5x106parkelvinentre0'cet300°c 8% | Repy Objetspourleservicedelatableoupourlacu",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1327,12 +1843,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 21,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-22",
+    "chunk_id": "Cir_2026_04_fr-annex-1-22",
     "text": "servicedelatableoupourlacuisine,enverred'uncoefficientdedilatationlineairen'excedantpas5x106parkelvinentre0'cet300°c 8% | Repy Objetspourleservicedelatableoupourlacuisine,enverred'uncoefficientdedilatationlineairen'excedantpas5x106parkelvinentre0'cet300°c 8% | | 7013 | 701399 | Autresobjetsenverrepourleservicedelatablepourlacuisinelatoilettelebureau,lrnementationdesappartementsouusagessimilaires | Autresobjetsenverrepourleservicedelatablepourlacuisinelatoilettelebureau,lrnementationdesappartementsouusagessimilaires | | 7013 | 701310 | 长 Objetsenvitroceramepourleservicedelatable,pourlacuisine,latoilette,lebureau,lornementationdesappartementsouusagessimilaires | 长 Objetsenvitroceramepourleservicedelatable,pourlacuisine,latoilette,lebureau,lornementationdesappartementsouusagessimilaires | | 7013 | 701341 | Objetspourleservicedelatable(autresquelesverresaboire)oupourlacuisine,autresqu'envitrocerame | | | 7013 | 701391 | Misteredu de Autresobjetspourleservicedelatable,pourlacuisine,latoilette,lebureau,l'ornementationdesappartement",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1345,12 +1867,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 22,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-23",
+    "chunk_id": "Cir_2026_04_fr-annex-1-23",
     "text": "cuisine,autresqu'envitrocerame | | | 7013 | 701391 | Misteredu de Autresobjetspourleservicedelatable,pourlacuisine,latoilette,lebureau,l'ornementationdesappartementsouusagessimilaires,encristalauplomb | Misteredu de Autresobjetspourleservicedelatable,pourlacuisine,latoilette,lebureau,l'ornementationdesappartementsouusagessimilaires,encristalauplomb | | 7013 | 701333 | Autresverresaboire,encristalauplomb | | | 7323 | 732393 | Articlesdemenageoud'economiedomestiqueetleursparties,enaciersinoxydables | Articlesdemenageoud'economiedomestiqueetleursparties,enaciersinoxydables | | 7323 | 732399 | Autresarticlesdemenageoud’economiedomestiqueetleursparties,enferouenacier | | | nsh4 | NGP | LIBELLE | |-----------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| | 7323 | 732394 | Articlesdemenageoud'economiedomestiqueetleursparties,enferouenacier,emailles | | 7323 | 732392 | Articlesdemenageoud'economiedome",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1363,12 +1891,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 358,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 23,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-24",
+    "chunk_id": "Cir_2026_04_fr-annex-1-24",
     "text": "23 | 732394 | Articlesdemenageoud'economiedomestiqueetleursparties,enferouenacier,emailles | | 7323 | 732392 | Articlesdemenageoud'economiedomestiqueetleursparties,enfonte,emailles | | 7610 | 761010 | Portes,fenetresetleurscadres,chambranlesetseuils | | 8201 | 820130 | Pioches,pics,houes,binettes,rateauxetracloirs | | 8211 | 821191 | Couteauxdetablealamefixe | | 8211 | 821192 | Autrescouteauxalamefixe | | 8215 | 821599 | Autrescuillers,fourchettes,louches,ecumoires,pellesatartes,couteauxspeciauxapoissonouabeurre,pincesasucreetarticlessimilaires | | 8215 | 821520 | Autresassortimentsdecuillers,fourchettes,louches,ecumoires,pellesatartes,couteauxspeciaux.. | | 8215 | 821591 | Cuillersfourchettes,louches,ecumoires,pellesatartes,couteauxspeciauxapoissonouabeurre,pincesasucreetarticlessimilaires,argentes,doresouplatines | | 8307 | 830790 | Tuyauxflex",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1381,12 +1915,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 24,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-25",
+    "chunk_id": "Cir_2026_04_fr-annex-1-25",
     "text": "s,louches,ecumoires,pellesatartes,couteauxspeciauxapoissonouabeurre,pincesasucreetarticlessimilaires,argentes,doresouplatines | | 8307 | 830790 | Tuyauxflexiblesenautresmetauxcommuns,memeavecleursaccessoires | | 8414 | 841451 | Ventilateursdetable,desol,muraux,plafonniers,detoituresoudefenetres,amoteurelectriqueincorpored'unepuissancen'excedantpas125w | | 8415 | 841510 | reglableseparement,destypesconcuspouretrefixessurunefenetre,unmur,unplafondousurlesol,formantunseulcorpsoudutypesplitsystem》(systemesaelementssepares) | | 8415 | 841581 | AutresmachinesetappareilspourleconditionnementdeI'air | | 8418 | 841810 | Combinaisonderefrigerateursetdecongelateursconservateursmunisdeportesoudetiroirsexterieurssepares,oud'unecombinaisondeceselements | | 8418 | 841821 | Refrigerateursdetypemenager | | 8418 | 841829 | Autresrefrigerateursdetypemenager | | 8419 | 841911 | Chauffeeaunonelectriquesachauffageinstantane,agaz | | 8450",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1399,12 +1939,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 25,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-26",
+    "chunk_id": "Cir_2026_04_fr-annex-1-26",
     "text": "typemenager | | 8418 | 841829 | Autresrefrigerateursdetypemenager | | 8419 | 841911 | Chauffeeaunonelectriquesachauffageinstantane,agaz | | 8450 | 845011 | | | 8450 | 845019 | Autresmachinesalaverlelinge,memeavecdispositifdesechage,dunecapaciteunitaireexprimeeenpoidsdelingesecn'excedantpas10kg | | 8450 | 845012 | Machinesalaverlelingeavecessoreusecentrifugeincorporee,autresquelesmachinesentierementautomatiques | | 8509 | 8509 | Appareilselectromecaniquesamoteurelectriqueincorpore,ausagedomestique,autresquelesaspirateursdun85.08 | | 8516 | 851660 | Autresfours;cuisinieres,rechauds(ycomprislestablesdecuisson),grilsetrotissoires | | 8516 | 851671 | Appareilspourlapreparationducafeouduthe | | 8516 | 851650 | Foursamicro-ondes | | 8516 | 851631 | Seche-cheveux | | 8516 | 851632 | Autresappareilspourlacoiffure | | 8516 | 851640 | Fersarepasserelectriques | | 8516 | 85",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1417,12 +1963,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 26,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-27",
+    "chunk_id": "Cir_2026_04_fr-annex-1-27",
     "text": "31 | Seche-cheveux | | 8516 | 851632 | Autresappareilspourlacoiffure | | 8516 | 851640 | Fersarepasserelectriques | | 8516 | 851672 | Grillepain | | 8516 | 851633 | Appareilspoursecherlesmains | | 8903 | 8903 | Yachtsetautresbateauxetembarcationsdeplaisanceoudesport;bateauxaramesetcanoes Sommiers;articlesdeliterieetarticlessimilaires(matelascouvrepieds,edredons,coussins,poufsoreillers,parexemple)comportantdesressortsoubienrembourresougarnisnterieurementdetoutesmatieresycompris | | 9404 | 9404 | ceuxencaoutchoucalveolaireouenmatieresplastiquesalveolaires,recouvertsounon | | 9503 | 950300 | Tricycles,trottinettes,autosapedalesetjouetsarouessimilaires;landausetpoussettespourpoupees;poupees;autresjouets;modelesreduitsetmodelessimilairespourledivertissement,animesounon;puzzlesdetoutgenre | | 9603 | 9603 | Balaisetbrosses,memeconstituantdespartiesdemachines,dappareilsoudevehicules,balaismecaniquespouremploialamain,autresquamoteur,pinceaux",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1435,12 +1987,18 @@
     "article_number": null,
     "article_label": "",
     "token_count": 360,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 27,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
-    "chunk_id": "Cir_2026_04_fr-annex-28",
+    "chunk_id": "Cir_2026_04_fr-annex-1-28",
     "text": "puzzlesdetoutgenre | | 9603 | 9603 | Balaisetbrosses,memeconstituantdespartiesdemachines,dappareilsoudevehicules,balaismecaniquespouremploialamain,autresquamoteur,pinceauxetplumeaux;tetesprepareespourarticlesdebrosserie;tampons etrouleauxapeindre;raclettesencaoutchoucouenmatieressouplesanalogues | | 9605 | 9605 | Assortimentsdevoyagepourlatoilettedespersonnes,lacoutureoulenettoyagedeschaussuresoudesvetements... | | | | Stylosetcrayonsabille;stylosetmarqueursamechefeutreouaautrespointesporeuses;stylosaplumeetautresstylos;styletspourduplicateurs;portemine;porteplume,portecrayonetarticlessimilaires;parties(ycompris lescapuchonsetlesagrafes)decesarticles,aI'exclusiondecellesdun96.09 | | 9608 | 9608 | Crayons(autresquelescrayonsdun96.8),mines,pastels,fusains,craiesaecrireouadessineretcraiesdetailleurs | | 9609 9619 | 6096 9619 | Serviettesettamponshygieniquescouchesangesetarticlessimilairesntoutesmatire | <!-- image -->",
     "source_file": "Cir_2026_04_fr.pdf",
     "circular_ref": "2026-04",
@@ -1453,9 +2011,15 @@
     "article_number": null,
     "article_label": "",
     "token_count": 338,
-    "parent_chunk": "Cir_2026_04_fr-annex",
+    "parent_chunk": "Cir_2026_04_fr-annex-1",
     "chunk_index": 28,
-    "num_chunks": 28
+    "num_chunks": 28,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
     "chunk_id": "Cir_2026_05_fr-header",
@@ -1473,7 +2037,13 @@
     "token_count": 68,
     "parent_chunk": "Cir_2026_05_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_05_fr-preamble",
@@ -1491,7 +2061,21 @@
     "token_count": 290,
     "parent_chunk": "Cir_2026_05_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [
+        "2016-35",
+        "2016-48"
+      ],
+      "circulars": [
+        "2025-09"
+      ],
+      "articles": [
+        410,
+        42
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_05_fr-article-1",
@@ -1509,7 +2093,13 @@
     "token_count": 61,
     "parent_chunk": "Cir_2026_05_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_05_fr-article-2",
@@ -1527,7 +2117,13 @@
     "token_count": 31,
     "parent_chunk": "Cir_2026_05_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_05_fr-signature",
@@ -1545,10 +2141,16 @@
     "token_count": 14,
     "parent_chunk": "Cir_2026_05_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
-    "chunk_id": "Cir_2026_05_fr-annex",
+    "chunk_id": "Cir_2026_05_fr-annex-1",
     "text": "## Annexe à la circulaire de la Banque Centrale de Tunisie n°2026-05 du 24 avril 2026\n\n## Liste des institutions adhérentes à la Plateforme Electronique des Chèques\n\n| Al Baraka Bank Tunisie                                |\n|-------------------------------------------------------|\n| ALUBAF                                                |\n| Amen Bank                                             |\n| Arab Tunisian Bank (ATB)                              |\n| Attijari Bank                                         |\n| Bank ABC                                              |\n| BH Bank                                               |\n| Banque Internationale Arabe de Tunisie (BIAT)         |\n| Banque Nationale Agricole (BNA)                       |\n| Banque de Tunisie (BT)                                |\n| Banque de Tunisie et des Émirats (BTE)                |\n| Banque Tuniso-Koweïtïenne (BTK)                       |\n| Banque Tuniso-Libyenne (BTL)                          |\n| Banque Tunisienne de Solidarité (BTS)                 |\n| Banque Zitouna                                        |\n| Citi Bank                                             |\n| North Africa International Bank (NAIB)                |\n| Office National des Postes                            |\n| Qatar National Bank (QNB)                             |\n| Société Tunisienne de Banque (STB)                    |\n| Tunis International Bank (TIB)                        |\n| Tunisian Saudi Bank (TSB)                             |\n| Union Bancaire pour le Commerce et l'Industrie (UBCI) |\n| Union Internationale de Banques (UIB)                 |\n| Wifak Bank                                            |",
     "source_file": "Cir_2026_05_fr.pdf",
     "circular_ref": "2026-05",
@@ -1561,9 +2163,15 @@
     "article_number": null,
     "article_label": "",
     "token_count": 343,
-    "parent_chunk": "Cir_2026_05_fr-annex",
+    "parent_chunk": "Cir_2026_05_fr-annex-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-1",
@@ -1581,7 +2189,13 @@
     "token_count": 359,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 1,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-2",
@@ -1599,7 +2213,13 @@
     "token_count": 359,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 2,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-3",
@@ -1617,7 +2237,13 @@
     "token_count": 358,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 3,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-4",
@@ -1635,7 +2261,13 @@
     "token_count": 359,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 4,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-5",
@@ -1653,7 +2285,13 @@
     "token_count": 359,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 5,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-6",
@@ -1671,7 +2309,13 @@
     "token_count": 361,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 6,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-7",
@@ -1689,7 +2333,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 7,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-8",
@@ -1707,7 +2357,13 @@
     "token_count": 358,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 8,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-9",
@@ -1725,7 +2381,13 @@
     "token_count": 356,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 9,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-10",
@@ -1743,7 +2405,13 @@
     "token_count": 344,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 10,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-11",
@@ -1761,7 +2429,13 @@
     "token_count": 342,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 11,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-12",
@@ -1779,7 +2453,13 @@
     "token_count": 356,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 12,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-13",
@@ -1797,7 +2477,13 @@
     "token_count": 360,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 13,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-14",
@@ -1815,7 +2501,13 @@
     "token_count": 353,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 14,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-15",
@@ -1833,7 +2525,13 @@
     "token_count": 350,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 15,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-16",
@@ -1851,7 +2549,13 @@
     "token_count": 355,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 16,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-17",
@@ -1869,7 +2573,13 @@
     "token_count": 357,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 17,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-18",
@@ -1887,7 +2597,13 @@
     "token_count": 356,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 18,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-19",
@@ -1905,7 +2621,13 @@
     "token_count": 353,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 19,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-20",
@@ -1923,7 +2645,13 @@
     "token_count": 351,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 20,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-21",
@@ -1941,7 +2669,13 @@
     "token_count": 351,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 21,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-22",
@@ -1959,7 +2693,13 @@
     "token_count": 349,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 22,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-23",
@@ -1977,7 +2717,13 @@
     "token_count": 355,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 23,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-24",
@@ -1995,7 +2741,13 @@
     "token_count": 351,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 24,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-25",
@@ -2013,7 +2765,13 @@
     "token_count": 353,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 25,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-26",
@@ -2031,7 +2789,13 @@
     "token_count": 354,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 26,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-27",
@@ -2049,7 +2813,13 @@
     "token_count": 354,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 27,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-28",
@@ -2067,7 +2837,13 @@
     "token_count": 357,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 28,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-29",
@@ -2085,7 +2861,13 @@
     "token_count": 350,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 29,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Cir_2026_06_ar-header-30",
@@ -2103,7 +2885,15 @@
     "token_count": 335,
     "parent_chunk": "Cir_2026_06_ar-header",
     "chunk_index": 30,
-    "num_chunks": 30
+    "num_chunks": 30,
+    "references": {
+      "laws": [
+        "2026-05"
+      ],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_132_fr-header-1",
@@ -2121,7 +2911,13 @@
     "token_count": 358,
     "parent_chunk": "Note_2026_132_fr-header",
     "chunk_index": 1,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_132_fr-header-2",
@@ -2139,10 +2935,16 @@
     "token_count": 163,
     "parent_chunk": "Note_2026_132_fr-header",
     "chunk_index": 2,
-    "num_chunks": 2
+    "num_chunks": 2,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
-    "chunk_id": "Note_2026_132_fr-annex",
+    "chunk_id": "Note_2026_132_fr-annex-1",
     "text": "## Annexe : Prototype du label national du paiement mobile TUNPAY\n\n<!-- image -->",
     "source_file": "Note_2026_132_fr.pdf",
     "circular_ref": "2026-132",
@@ -2155,9 +2957,15 @@
     "article_number": null,
     "article_label": "",
     "token_count": 21,
-    "parent_chunk": "Note_2026_132_fr-annex",
+    "parent_chunk": "Note_2026_132_fr-annex-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": "1"
   },
   {
     "chunk_id": "Note_2026_166_ar-header",
@@ -2175,7 +2983,13 @@
     "token_count": 304,
     "parent_chunk": "Note_2026_166_ar-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_43_fr-header",
@@ -2193,7 +3007,13 @@
     "token_count": 70,
     "parent_chunk": "Note_2026_43_fr-header",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_43_fr-preamble",
@@ -2211,7 +3031,20 @@
     "token_count": 149,
     "parent_chunk": "Note_2026_43_fr-preamble",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [
+        "2016-35"
+      ],
+      "circulars": [],
+      "articles": [
+        13,
+        14,
+        15,
+        63
+      ]
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_43_fr-article-1",
@@ -2229,7 +3062,13 @@
     "token_count": 218,
     "parent_chunk": "Note_2026_43_fr-article-1",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_43_fr-article-2",
@@ -2247,7 +3086,13 @@
     "token_count": 53,
     "parent_chunk": "Note_2026_43_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   },
   {
     "chunk_id": "Note_2026_43_fr-signature",
@@ -2265,6 +3110,12 @@
     "token_count": 14,
     "parent_chunk": "Note_2026_43_fr-article-2",
     "chunk_index": 1,
-    "num_chunks": 1
+    "num_chunks": 1,
+    "references": {
+      "laws": [],
+      "circulars": [],
+      "articles": []
+    },
+    "annex_number": null
   }
 ]
