@@ -69,3 +69,6 @@ benchmark_results.json
 
 chroma_db/
 EOF
+# Neo4j database/runtime data
+neo4j_data/
+

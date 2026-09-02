@@ -221,3 +221,72 @@ class GraphBuilder:
                 "target": target,
             },
         )
+    def link_article_chunk(
+        self,
+        circular_ref: str,
+        article_number: int,
+        chunk_id: str,
+    ):
+        """
+        Article -[:REPRESENTED_BY]-> Chunk.
+
+        Creates the Chunk node (keyed by its Qdrant chunk_id) if it
+        doesn't exist yet. Returns [] / linked=0 if the Article node
+        doesn't exist — should not happen if pass 1 ran first.
+        """
+
+        query = """
+        MATCH (a:Article {
+            circular_reference: $circular,
+            number: $number
+        })
+
+        MERGE (c:Chunk {id: $chunk_id})
+
+        MERGE (a)-[:REPRESENTED_BY]->(c)
+
+        RETURN count(*) AS linked
+        """
+
+        return self.client.execute(
+            query,
+            {
+                "circular": circular_ref,
+                "number": article_number,
+                "chunk_id": chunk_id,
+            },
+        )
+
+    def link_annex_chunk(
+        self,
+        circular_ref: str,
+        annex_number: str,
+        chunk_id: str,
+    ):
+        """
+        Annex -[:REPRESENTED_BY]-> Chunk.
+
+        Same pattern as link_article_chunk, for Annex nodes.
+        """
+
+        query = """
+        MATCH (a:Annex {
+            circular_reference: $circular,
+            number: $number
+        })
+
+        MERGE (c:Chunk {id: $chunk_id})
+
+        MERGE (a)-[:REPRESENTED_BY]->(c)
+
+        RETURN count(*) AS linked
+        """
+
+        return self.client.execute(
+            query,
+            {
+                "circular": circular_ref,
+                "number": annex_number,
+                "chunk_id": chunk_id,
+            },
+        )

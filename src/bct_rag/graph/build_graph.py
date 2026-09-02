@@ -183,6 +183,64 @@ def build_pass_2_relationships(chunks: list[dict], builder: GraphBuilder) -> dic
 
     return stats
 
+def build_pass_3_chunk_links(chunks: list[dict], builder: GraphBuilder) -> dict:
+        """
+        Link every article/annex chunk to its Article/Annex node via
+        REPRESENTED_BY. Must run after pass 1 (nodes must exist).
+        """
+
+        stats = {
+            "article_chunks_ok": 0,
+            "article_chunks_skipped": 0,
+            "annex_chunks_ok": 0,
+            "annex_chunks_skipped": 0,
+        }
+
+        for chunk in chunks:
+
+            chunk_type = chunk.get("chunk_type")
+            circular_ref = chunk.get("circular_ref")
+            chunk_id = chunk.get("chunk_id")
+
+            if not circular_ref or not chunk_id:
+                continue
+
+            if chunk_type == "article":
+
+                article_number = chunk.get("article_number")
+
+                if article_number is None:
+                    continue
+
+                result = builder.link_article_chunk(circular_ref, article_number, chunk_id)
+                linked = result[0]["linked"] if result else 0
+
+                if linked:
+                    stats["article_chunks_ok"] += 1
+                else:
+                    stats["article_chunks_skipped"] += 1
+                    print(
+                        f"  ⚠ skipped: chunk {chunk_id} -> article {article_number} of {circular_ref} (article node not found)")
+
+            elif chunk_type == "annex":
+
+                annex_number = chunk.get("annex_number")
+
+                if annex_number is None:
+                    continue
+
+                result = builder.link_annex_chunk(circular_ref, annex_number, chunk_id)
+                linked = result[0]["linked"] if result else 0
+
+                if linked:
+                    stats["annex_chunks_ok"] += 1
+                else:
+                    stats["annex_chunks_skipped"] += 1
+                    print(
+                        f"  ⚠ skipped: chunk {chunk_id} -> annex {annex_number} of {circular_ref} (annex node not found)")
+
+        return stats
+
 
 def main():
 
@@ -204,6 +262,11 @@ def main():
     rel_stats = build_pass_2_relationships(chunks, builder)
     print(f"  circular->law:      {rel_stats['circular_to_law_ok']} ok, {rel_stats['circular_to_law_skipped']} skipped")
     print(f"  circular->circular: {rel_stats['circular_to_circular_ok']} ok, {rel_stats['circular_to_circular_skipped']} skipped")
+
+    print("\nPass 3: linking chunks to graph entities...")
+    chunk_stats = build_pass_3_chunk_links(chunks, builder)
+    print(f"  article chunks: {chunk_stats['article_chunks_ok']} ok, {chunk_stats['article_chunks_skipped']} skipped")
+    print(f"  annex chunks:   {chunk_stats['annex_chunks_ok']} ok, {chunk_stats['annex_chunks_skipped']} skipped")
 
     client.close()
 
