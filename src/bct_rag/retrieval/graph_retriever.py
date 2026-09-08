@@ -8,39 +8,74 @@ class GraphRetriever:
         self.client = GraphClient()
 
     def expand_from_chunk(
-        self,
-        chunk_id: str,
+            self,
+            chunk_id: str,
     ):
         """
-        Given a Qdrant chunk_id, find its graph entity (Article/Annex)
-        and expand outward 1 hop to related entities (laws it cites,
-        circulars it references/is referenced by, sibling articles in
-        the same circular).
+        Given a Qdrant chunk_id, find its graph entity and expand
+        outward 1 hop, in both directions, to related entities.
 
-        Kept shallow (1 hop) deliberately — see Step 27's note on why
-        unbounded traversal is dangerous here.
+        Direction is queried explicitly (outgoing vs incoming) rather
+        than inferred from node labels afterward — label-based
+        inference breaks for Circular -> Circular edges, since both
+        sides share the same label and can't be told apart after the
+        fact. Two directed queries, anchored on the entity's elementId,
+        avoid that ambiguity entirely.
         """
 
-        query = """
+        anchor_query = """
         MATCH (c:Chunk {id: $chunk_id})
-
         OPTIONAL MATCH (entity)-[:REPRESENTED_BY]->(c)
-
-        OPTIONAL MATCH (entity)-[rel:REFERENCES|AMENDS|CONTAINS]-(related)
-
-        RETURN
-            entity,
-            labels(entity)[0] AS entity_type,
-            related,
-            labels(related)[0] AS related_type,
-            type(rel) AS relation_type
+        RETURN entity, labels(entity)[0] AS entity_type, elementId(entity) AS entity_id
         """
-        return self.client.execute(
-            query,
-            {
-                "chunk_id": chunk_id,
-            },
-        )
+
+        anchor = self.client.execute(anchor_query, {"chunk_id": chunk_id})
+
+        if not anchor or anchor[0]["entity"] is None:
+            return []
+
+        entity = anchor[0]["entity"]
+        entity_type = anchor[0]["entity_type"]
+        entity_id = anchor[0]["entity_id"]
+
+        outgoing_query = """
+        MATCH (entity) WHERE elementId(entity) = $eid
+        MATCH (entity)-[rel:REFERENCES|AMENDS|CONTAINS]->(target)
+        RETURN type(rel) AS relation_type, target, labels(target)[0] AS target_type
+        """
+
+        incoming_query = """
+        MATCH (entity) WHERE elementId(entity) = $eid
+        MATCH (source)-[rel:REFERENCES|AMENDS|CONTAINS]->(entity)
+        RETURN type(rel) AS relation_type, source, labels(source)[0] AS source_type
+        """
+
+        outgoing = self.client.execute(outgoing_query, {"eid": entity_id})
+        incoming = self.client.execute(incoming_query, {"eid": entity_id})
+
+        results = []
+
+        for row in outgoing:
+            results.append({
+                "direction": "outgoing",
+                "entity": entity,
+                "entity_type": entity_type,
+                "related": row["target"],
+                "related_type": row["target_type"],
+                "relation_type": row["relation_type"],
+            })
+
+        for row in incoming:
+            results.append({
+                "direction": "incoming",
+                "entity": entity,
+                "entity_type": entity_type,
+                "related": row["source"],
+                "related_type": row["source_type"],
+                "relation_type": row["relation_type"],
+            })
+
+        return results
 
     def close(self):
 
@@ -75,15 +110,8 @@ def enrich_hits(hits: list[dict]) -> list[dict]:
         return enriched
 def format_graph_context(enriched_hits: list[dict]) -> str:
     """
-    Turn raw graph rows from enrich_hits() into a short, deduplicated,
-    correctly-directed list of cross-references.
-
-    Direction is inferred from node labels (CONTAINS is always
-    Circular -> Article/Annex; REFERENCES to a Law is always
-    Circular -> Law) rather than trusting which node the undirected
-    Cypher match happened to bind as "entity" — that binding varies
-    depending on which chunk anchored the traversal and does not
-    reflect the true relationship direction.
+    Turn raw graph rows from enrich_hits() into a short, deduplicated
+    list of correctly-directed cross-references.
     """
 
     lines = set()
@@ -92,13 +120,7 @@ def format_graph_context(enriched_hits: list[dict]) -> str:
 
         for row in item.get("graph_context", []):
 
-            line = _format_edge(
-                row.get("entity_type"),
-                row.get("entity"),
-                row.get("related_type"),
-                row.get("related"),
-                row.get("relation_type"),
-            )
+            line = _format_edge(row)
 
             if line:
                 lines.add(line)
@@ -106,43 +128,50 @@ def format_graph_context(enriched_hits: list[dict]) -> str:
     return "\n".join(f"- {line}" for line in sorted(lines))
 
 
-def _format_edge(entity_type, entity, related_type, related, relation_type) -> str | None:
+def _describe_node(node_type: str, node: dict) -> str:
+
+    if node_type == "Circular":
+        return f"Circular {node.get('reference')}"
+
+    if node_type == "Law":
+        return f"Law {node.get('reference')}"
+
+    if node_type == "Article":
+        return f"Article {node.get('number')} of {node.get('circular_reference')}"
+
+    if node_type == "Annex":
+        return f"Annex {node.get('number')} of {node.get('circular_reference')}"
+
+    return f"{node_type or 'Entity'} {dict(node)}"
+
+
+def _format_edge(row: dict) -> str | None:
+    """
+    Direction comes pre-resolved from expand_from_chunk() ("outgoing"
+    means entity -> related; "incoming" means related -> entity), so
+    this only needs to normalize into (source, target) and render —
+    no more guessing direction from node labels.
+    """
+
+    entity = row.get("entity")
+    related = row.get("related")
+    relation_type = row.get("relation_type")
+    direction = row.get("direction")
 
     if not entity or not related or not relation_type:
         return None
 
-    nodes = {entity_type: entity, related_type: related}
+    if direction == "outgoing":
+        source, source_type = entity, row.get("entity_type")
+        target, target_type = related, row.get("related_type")
+    else:
+        source, source_type = related, row.get("related_type")
+        target, target_type = entity, row.get("entity_type")
 
-    if relation_type == "CONTAINS":
+    verb = {
+        "CONTAINS": "contains",
+        "REFERENCES": "references",
+        "AMENDS": "amends",
+    }.get(relation_type, relation_type.lower())
 
-        circular = nodes.get("Circular")
-        child_type = "Article" if "Article" in nodes else ("Annex" if "Annex" in nodes else None)
-
-        if not circular or not child_type:
-            return None
-
-        child = nodes[child_type]
-        return f"Circular {circular.get('reference')} contains {child_type} {child.get('number')} of {child.get('circular_reference')}"
-
-    if relation_type == "REFERENCES":
-
-        if "Law" in nodes:
-            circular = nodes.get("Circular")
-            law = nodes["Law"]
-
-            if not circular:
-                return None
-
-            return f"Circular {circular.get('reference')} references Law {law.get('reference')}"
-
-        # Circular -> Circular REFERENCES: both sides share the same
-        # label, so direction can't be inferred from labels alone with
-        # the current undirected query. No such edges exist yet in this
-        # corpus (all 7 attempts pointed at unindexed older circulars),
-        # so this is skipped for now rather than risk showing it backwards.
-        return None
-
-    # AMENDS: same ambiguity as circular-to-circular REFERENCES, and no
-    # AMENDS edges exist yet (link_amends is never called from
-    # build_graph.py). Skipped until that's addressed.
-    return None
+    return f"{_describe_node(source_type, source)} {verb} {_describe_node(target_type, target)}"
