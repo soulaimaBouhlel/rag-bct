@@ -54,7 +54,7 @@ def build_context(documents):
     return "\n\n".join(parts)
 
 
-def generate(question, documents):
+def generate(question, documents, graph_context: str | None = None):
 
     if not documents:
         return "I could not find this information in the available regulations."
@@ -62,13 +62,34 @@ def generate(question, documents):
     context = build_context(documents)
     print(f"Retrieved {len(documents)} chunks")
     print(f"Context length: {len(context)} characters")
+    print(f"Graph context length: {len(graph_context) if graph_context else 0} characters")
+    graph_section = ""
+    if graph_context:
+        graph_section = f"""
+    Background knowledge graph (NOT a source, NOT for citation)
+    =============================================================
+
+    This is background structural metadata only — it exists to help you
+    understand how regulations relate to each other. It is NOT part of
+    the retrieved regulatory text, and its lines must NEVER be copied
+    into your answer or into the Sources list. Only use it to decide
+    whether to mention, in your own words, that a related law or article
+    exists — never quote these lines directly, never list them as
+    Sources. Your Sources must always come from the Context section
+    above, never from here.
+
+    {graph_context}
+
+    (End of background metadata — the actual regulatory text is in the
+    Context section above.)
+    """
 
     user_prompt = f"""
 Context
 =======
 
 {context}
-
+{graph_section}
 Question
 ========
 
@@ -76,7 +97,6 @@ Question
 
 Instructions
 ============
-
 Using ONLY the context above:
 
 - Answer the user's question.
