@@ -76,6 +76,22 @@ class GraphRetriever:
             })
 
         return results
+    def find_circulars_sharing_laws(self):
+        """
+        Find pairs of circulars that cite at least one common law,
+        grouped by the shared law.
+        """
+
+        query = """
+        MATCH (c1:Circular)-[:REFERENCES]->(l:Law)<-[:REFERENCES]-(c2:Circular)
+        WHERE c1.reference < c2.reference
+        RETURN
+            l.reference AS shared_law,
+            collect(DISTINCT c1.reference + ' & ' + c2.reference) AS circular_pairs
+        ORDER BY shared_law
+        """
+
+        return self.client.execute(query)
 
     def close(self):
 

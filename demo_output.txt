@@ -23,3 +23,83 @@ Retrieved 5 chunks, generating answer...
 Retrieved 5 chunks
 Context length: 3604 characters
 Graph context length: 845 characters
+Answer:
+La circulaire 2026-03 se fonde sur la loi n°2016-35 du 25 avril 2016, portant fixation du statut de la Banque Centrale de Tunisie et la loi n°2016-48 du 11 juillet 2016, relative aux banques et aux établissements financiers.
+
+Sources:
+- Circular 2026-03
+- Article 1 of 2026-03
+
+
+==========================================================================================
+QUESTION: Quelles sont les conditions de distribution des dividendes ?
+==========================================================================================
+
+--- Phase 1 (vector search only) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3385 characters
+Graph context length: 0 characters
+Answer:
+La distribution des dividendes au titre de l'exercice 2025 par les banques et les établissements financiers se fait dans les conditions suivantes :
+
+- Dans la limite de 35% du bénéfice de l'exercice 2025 pour les banques et les établissements financiers présentant des ratios de solvabilité et Tier 1 arrêtés à fin 2025, après déduction des dividendes à verser, qui dépassent les niveaux minimums réglementaires de 2,5% au moins (Circular n°2026-3, Article 1).
+
+- Sans limite et après accord préalable de la Banque Centrale de Tunisie, pour les banques et les établissements financiers présentant des ratios de solvabilité et Tier 1 arrêtés à fin 2025, après déduction des dividendes à verser, qui dépassent les niveaux minimums réglementaires respectivement de 2,5% et 3,5% au moins (Circular n°2026-3, Article 1).
+
+Sources:
+- Circular n°2026-3
+- Article 1
+
+--- Phase 2 (graph-enhanced) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3385 characters
+Graph context length: 328 characters
+Answer:
+La distribution des dividendes au titre de l'exercice 2025 par les banques et les établissements financiers se fait dans les conditions suivantes :
+
+- Dans la limite de 35% du bénéfice de l'exercice 2025 pour les banques et les établissements financiers présentant des ratios de solvabilité et Tier 1 arrêtés à fin 2025, après déduction des dividendes à verser, qui dépassent les niveaux minimums réglementaires de 2,5% au moins (Circular 2026-3, Article 1).
+
+- Sans limite et après accord préalable de la Banque Centrale de Tunisie, pour les banques et les établissements financiers présentant des ratios de solvabilité et Tier 1 arrêtés à fin 2025, après déduction des dividendes à verser, qui dépassent les niveaux minimums réglementaires respectivement de 2,5% et 3,5% au moins (Circular 2026-3, Article 1).
+
+- L'accord préalable de la Banque Centrale de Tunisie est requis pour toute distribution de dividendes ne respectant pas les normes prudentielles d'adéquation des fonds propres ou dont l'opinion des commissaires aux comptes comporte des réserves et/ou des paragraphes d'observation (Circular 2026-3, Article 2).
+
+Sources:
+- Circular 2026-3
+- Article 1
+- Article 2
+
+
+==========================================================================================
+QUESTION: Quelles circulaires se basent sur la loi n°2016-35 mais pas sur la loi n°2016-48 ?
+==========================================================================================
+
+--- Phase 1 (vector search only) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3146 characters
+Graph context length: 0 characters
+Answer:
+I could not find this information in the available regulations.
+
+Sources: 
+- None
+
+--- Phase 2 (graph-enhanced) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3146 characters
+Graph context length: 747 characters
+Answer:
+- Circular 2026-03
+
+Sources:
+- Circular 2026-03
+- Article 4
+
+

@@ -10,6 +10,7 @@ from src.bct_rag.pipeline import ask
 QUESTIONS = [
     "Sur quelles lois se fonde la circulaire 2026-03 ?",
     "Quelles sont les conditions de distribution des dividendes ?",
+    "Quelles circulaires se basent sur la loi n°2016-35 mais pas sur la loi n°2016-48 ?",
 ]
 
 
