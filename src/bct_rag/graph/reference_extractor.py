@@ -119,6 +119,7 @@ def extract_references(text: str) -> dict:
         "circulars": extract_circulars(text),
         "articles": extract_articles(text),
         "annex_number": extract_annex_number(text),
+        "amendments": extract_amendments(text),
     }
 
 
@@ -142,3 +143,43 @@ def extract_annex_number(text: str) -> str | None:
         return None
 
     return match.group(1).upper()
+# Active amendment verbs directly acting on a target (this document
+# amends/repeals/replaces the cited circular) — distinct from the
+# passive "telle que modifiée par les textes subséquents" boilerplate
+# that describes a citation's own history, not an action taken here.
+AMENDMENT_VERB_PATTERN = re.compile(
+    r"\b(abroge|abrogeant|modifie|modifiant|remplace|remplaçant|complète|complétant)\b"
+    r"(?!\s+par\s+les\s+textes\s+subséquents)",
+    re.IGNORECASE,
+)
+
+
+def extract_amendments(text: str) -> list[str]:
+    """
+    Extract circular references that this text actively amends/repeals/
+    replaces — as opposed to merely citing.
+
+    Heuristic: split into clauses (by comma/period/semicolon), and for
+    each clause containing both an amendment verb (not the passive
+    "modifiée par les textes subséquents" boilerplate) and a circular
+    reference, treat that circular as amended.
+
+    This deliberately under-triggers rather than over-triggers: most
+    Tunisian regulatory preambles only cite prior circulars historically
+    ("telle que modifiée...") without this document itself amending
+    them, so a conservative heuristic avoids false AMENDS edges.
+    """
+
+    amended = []
+
+    clauses = re.split(r"[.,;]", text)
+
+    for clause in clauses:
+
+        if not AMENDMENT_VERB_PATTERN.search(clause):
+            continue
+
+        for circular_ref in extract_circulars(clause):
+            amended.append(circular_ref)
+
+    return _dedupe_preserve_order(amended)

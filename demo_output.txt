@@ -1,0 +1,25 @@
+==========================================================================================
+QUESTION: Sur quelles lois se fonde la circulaire 2026-03 ?
+==========================================================================================
+
+--- Phase 1 (vector search only) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3604 characters
+Graph context length: 0 characters
+Answer:
+Vu la loi n°2016-35 du 25 avril 2016, portant fixation du statut de la Banque Centrale de Tunisie et notamment ses articles 7, 8 et 18,
+
+Vu  la  loi  n°2016-48  du  11  juillet  2016,  relative  aux  banques  et  aux établissements financiers et notamment ses articles 63 et 66,
+
+Sources:
+- Circular 2026-03
+- Article non spécifié
+
+--- Phase 2 (graph-enhanced) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3604 characters
+Graph context length: 845 characters

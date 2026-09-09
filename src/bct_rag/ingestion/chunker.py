@@ -61,7 +61,7 @@ def strip_self_reference(refs: dict, own_circular_ref: str) -> dict:
         "circulars": [c for c in refs["circulars"] if c != own_circular_ref],
         "articles": refs["articles"],
         "annex_number": refs["annex_number"],
-
+        "amendments": [a for a in refs["amendments"] if a != own_circular_ref],
     }
 
 # ─────────────────────────────
@@ -93,6 +93,7 @@ class Chunk:
 
     references: dict
     annex_number: Optional[str]
+    amendments: list
 
 # ─────────────────────────────
 # SIGNATURE POST-PROCESSING
@@ -259,6 +260,7 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
                 "articles": body_refs["articles"],
             },
             annex_number=body_refs["annex_number"],
+            amendments=body_refs["amendments"],
         )
         result.append(article_chunk)
 
@@ -282,6 +284,7 @@ def post_process_signatures(chunks: List[Chunk]) -> List[Chunk]:
             num_chunks=1,
             references={"laws": [], "circulars": [], "articles": []},
             annex_number=None,
+            amendments=[],
         )
         result.append(sig_chunk)
 
@@ -491,6 +494,7 @@ def chunk_markdown(
                     "articles": refs["articles"],
                 },
                 annex_number=resolved_annex_number,
+                amendments=refs["amendments"],
             ))
 
     # ─────────────────────────────

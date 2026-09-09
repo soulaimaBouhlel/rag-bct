@@ -119,7 +119,7 @@ def build_pass_1_nodes(chunks: list[dict], builder: GraphBuilder) -> dict:
 
 def build_pass_2_relationships(chunks: list[dict], builder: GraphBuilder) -> dict:
     """
-    Create all Circular -> Law and Circular -> Circular REFERENCES edges.
+    Create all Circular -> Law, Circular -> Circular, and AMENDS edges.
 
     Every node type was created in pass 1, so any skip here reflects a
     genuine data issue (e.g. a referenced circular that was never
@@ -131,10 +131,13 @@ def build_pass_2_relationships(chunks: list[dict], builder: GraphBuilder) -> dic
         "circular_to_law_skipped": 0,
         "circular_to_circular_ok": 0,
         "circular_to_circular_skipped": 0,
+        "amends_ok": 0,
+        "amends_skipped": 0,
     }
 
     seen_law_edges = set()
     seen_circular_edges = set()
+    seen_amends_edges = set()
 
     for chunk in chunks:
 
@@ -181,8 +184,25 @@ def build_pass_2_relationships(chunks: list[dict], builder: GraphBuilder) -> dic
                 stats["circular_to_circular_skipped"] += 1
                 print(f"  ⚠ skipped: {circular_ref} -> circular {other_circular} (circular not found — likely an older/unindexed document)")
 
-    return stats
+        for amended_circular in refs.get("amendments", []):
 
+            edge = (circular_ref, amended_circular)
+
+            if edge in seen_amends_edges:
+                continue
+
+            seen_amends_edges.add(edge)
+
+            result = builder.link_amends(circular_ref, amended_circular)
+            linked = result[0]["linked"] if result else 0
+
+            if linked:
+                stats["amends_ok"] += 1
+            else:
+                stats["amends_skipped"] += 1
+                print(f"  ⚠ skipped: {circular_ref} AMENDS {amended_circular} (circular not found)")
+
+    return stats
 def build_pass_3_chunk_links(chunks: list[dict], builder: GraphBuilder) -> dict:
     """
     Link chunks to their graph entity via REPRESENTED_BY.
@@ -278,6 +298,7 @@ def main():
     rel_stats = build_pass_2_relationships(chunks, builder)
     print(f"  circular->law:      {rel_stats['circular_to_law_ok']} ok, {rel_stats['circular_to_law_skipped']} skipped")
     print(f"  circular->circular: {rel_stats['circular_to_circular_ok']} ok, {rel_stats['circular_to_circular_skipped']} skipped")
+    print(f"  amends:             {rel_stats['amends_ok']} ok, {rel_stats['amends_skipped']} skipped")
 
     print("\nPass 3: linking chunks to graph entities...")
     chunk_stats = build_pass_3_chunk_links(chunks, builder)
