@@ -1,4 +1,4 @@
-from src.bct_rag.ingestion.pipeline import run as ingest
+from src.bct_rag.ingestion.pipeline import run as ingest, _try_law_diff_query
 from src.bct_rag.indexing.index_qdrant import main as index_qdrant
 from src.bct_rag.retrieval.retriever import retrieve, graph_enhanced_retrieve
 from src.bct_rag.retrieval.graph_retriever import format_graph_context
@@ -16,6 +16,10 @@ def run():
     print("\nPipeline completed successfully.")
 
 def ask(question, use_graph: bool = False):
+    if use_graph:
+        graph_answer = _try_law_diff_query(question)
+        if graph_answer is not None:
+            return graph_answer
 
     if use_graph:
         enriched = graph_enhanced_retrieve(question)

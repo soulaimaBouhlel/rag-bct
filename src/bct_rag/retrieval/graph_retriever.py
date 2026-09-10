@@ -92,6 +92,22 @@ class GraphRetriever:
         """
 
         return self.client.execute(query)
+    def find_circulars_citing_but_not(self, law_ref: str, excluded_law_ref: str):
+        """
+        Circulars that cite law_ref but do NOT cite excluded_law_ref.
+        """
+
+        query = """
+        MATCH (c:Circular)-[:REFERENCES]->(:Law {reference: $law_ref})
+        WHERE NOT (c)-[:REFERENCES]->(:Law {reference: $excluded_law_ref})
+        RETURN c.reference AS circular_reference
+        ORDER BY c.reference
+        """
+
+        return self.client.execute(
+            query,
+            {"law_ref": law_ref, "excluded_law_ref": excluded_law_ref},
+        )
 
     def close(self):
 

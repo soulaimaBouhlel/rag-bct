@@ -66,38 +66,48 @@ def generate(question, documents, graph_context: str | None = None):
     graph_section = ""
     if graph_context:
         graph_section = f"""
-    Background knowledge graph (NOT a source, NOT for citation)
-    =============================================================
 
-    This is background structural metadata only — it exists to help you
-    understand how regulations relate to each other. It is NOT part of
-    the retrieved regulatory text, and its lines must NEVER be copied
-    into your answer or into the Sources list. Only use it to decide
-    whether to mention, in your own words, that a related law or article
-    exists — never quote these lines directly, never list them as
-    Sources. Your Sources must always come from the Context section
-    above, never from here.
+    Background knowledge graph (NOT a source, NOT for citation, NOT sufficient to answer alone)
+    =============================================================================================
+
+    This is background structural metadata about document relationships
+    (which laws a circular cites, which articles belong to it, etc). It
+    is NOT retrieved regulatory text and CANNOT be used, by itself, to
+    answer the question.
+
+    RULES:
+    - If the Context section above already answers the question, you may
+      use this metadata only to add a brief, natural-language mention of
+      a related document — never quote these lines, never list them as
+      Sources.
+    - If the Context section above does NOT contain enough information to
+      answer the question, you MUST reply with the standard fallback
+      ("I could not find this information in the available regulations"),
+      even if this background metadata seems related or suggestive. This
+      metadata shows relationships, not absence or presence of specific
+      facts — it can never substitute for the actual regulatory text.
+    - Never treat a gap or pattern in this metadata as proof of anything
+      the Context section doesn't explicitly state.
 
     {graph_context}
-
-    (End of background metadata — the actual regulatory text is in the
-    Context section above.)
     """
+        user_prompt = f"""
+    Context
+    =======
 
-    user_prompt = f"""
-Context
-=======
+    {context}
 
-{context}
-{graph_section}
-Question
-========
+    --- End of Context ---
+    {graph_section}
+    Question
+    ========
 
-{question}
+    {question}
 
 Instructions
 ============
-Using ONLY the context above:
+Using ONLY the Context section above (never the background knowledge
+graph alone) to determine your answer:
 
 - Answer the user's question.
 - Return ONLY the final answer.
