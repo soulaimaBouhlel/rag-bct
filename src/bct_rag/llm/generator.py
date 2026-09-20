@@ -54,7 +54,7 @@ def build_context(documents):
     return "\n\n".join(parts)
 
 
-def generate(question, documents):
+def generate(question, documents, graph_context: str | None = None):
 
     if not documents:
         return "I could not find this information in the available regulations."
@@ -62,22 +62,52 @@ def generate(question, documents):
     context = build_context(documents)
     print(f"Retrieved {len(documents)} chunks")
     print(f"Context length: {len(context)} characters")
+    print(f"Graph context length: {len(graph_context) if graph_context else 0} characters")
+    graph_section = ""
+    if graph_context:
+        graph_section = f"""
 
-    user_prompt = f"""
-Context
-=======
+    Background knowledge graph (NOT a source, NOT for citation, NOT sufficient to answer alone)
+    =============================================================================================
 
-{context}
+    This is background structural metadata about document relationships
+    (which laws a circular cites, which articles belong to it, etc). It
+    is NOT retrieved regulatory text and CANNOT be used, by itself, to
+    answer the question.
 
-Question
-========
+    RULES:
+    - If the Context section above already answers the question, you may
+      use this metadata only to add a brief, natural-language mention of
+      a related document — never quote these lines, never list them as
+      Sources.
+    - If the Context section above does NOT contain enough information to
+      answer the question, you MUST reply with the standard fallback
+      ("I could not find this information in the available regulations"),
+      even if this background metadata seems related or suggestive. This
+      metadata shows relationships, not absence or presence of specific
+      facts — it can never substitute for the actual regulatory text.
+    - Never treat a gap or pattern in this metadata as proof of anything
+      the Context section doesn't explicitly state.
 
-{question}
+    {graph_context}
+    """
+        user_prompt = f"""
+    Context
+    =======
+
+    {context}
+
+    --- End of Context ---
+    {graph_section}
+    Question
+    ========
+
+    {question}
 
 Instructions
 ============
-
-Using ONLY the context above:
+Using ONLY the Context section above (never the background knowledge
+graph alone) to determine your answer:
 
 - Answer the user's question.
 - Return ONLY the final answer.

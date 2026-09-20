@@ -4,6 +4,7 @@ from qdrant_client.models import (
     FieldCondition,
     MatchValue,
 )
+from src.bct_rag.retrieval.graph_retriever import enrich_hits
 import os
 
 from src.bct_rag.embedding.embedder import embed
@@ -194,6 +195,24 @@ def retrieve(
         return retriever.retrieve_parents(
             child_hits
         )
+def graph_enhanced_retrieve(
+    question: str,
+    k: int = 5,
+    score_threshold: float = 0.82,
+) -> list[dict]:
+    """
+    Phase 2 retrieval: identical to retrieve(), plus 1-hop graph
+    context attached to each result. retrieve() itself is untouched,
+    so Phase 1 behavior is unaffected — this is purely additive.
+    """
+
+    hits = retrieve(
+        question,
+        k=k,
+        score_threshold=score_threshold,
+    )
+
+    return enrich_hits(hits)
 def print_results(results):
 
     for i, hit in enumerate(results, 1):

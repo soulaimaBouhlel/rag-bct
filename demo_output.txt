@@ -1,0 +1,10 @@
+==========================================================================================
+QUESTION: Sur quelles lois se fonde la circulaire 2026-03 ?
+==========================================================================================
+
+--- Phase 1 (vector search only) ---
+
+Retrieved 5 chunks, generating answer...
+Retrieved 5 chunks
+Context length: 3604 characters
+Graph context length: 0 characters
