@@ -7,11 +7,17 @@ mcp = FastMCP("BCT-RAG")
 def search_regulations(question: str) -> str:
     """
     Search Banque Centrale de Tunisie regulatory circulars and return a
-    sourced answer grounded in the retrieved regulation text.
+    sourced answer grounded in the retrieved regulation text, enhanced
+    with a knowledge graph of citation relationships between circulars,
+    laws, and articles.
 
     The returned string is already the final, complete, sourced answer.
     It has been generated with strict grounding rules (no inference, no
-    reinterpretation of legal thresholds, no invented values).
+    reinterpretation of legal thresholds, no invented values). For
+    questions about which documents reference which laws or each other
+    (e.g. "which circulars cite law X but not law Y"), the answer may
+    come directly from the regulatory knowledge graph rather than from
+    generated text — treat it with the same authority either way.
 
     When presenting this result to the user, you MUST:
     - The retrieved answer uses "%" (percent), not "percentage points".
@@ -33,7 +39,7 @@ def search_regulations(question: str) -> str:
     second-guessed or annotated.
     """
     print("Question:", question)
-    return ask(question)
+    return ask(question, use_graph=True)
 
 
 if __name__ == "__main__":
