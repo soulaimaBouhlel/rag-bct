@@ -702,6 +702,42 @@ The Parent-Child Retrieval tests verify:
 
 ---
 
+# Evaluation: Phase 1 vs Phase 2
+
+`src/bct_rag/evaluation/` compares vector-only retrieval (Phase 1) with
+graph-enhanced retrieval (Phase 2) on a gold set of 13 questions
+(`data/eval/golden_set.json`): single-document questions, cross-document
+questions, a negation question ("law A but not law B") and unanswerable
+questions.
+
+Measures, per phase:
+
+| Measure | Meaning |
+|---|---|
+| Answer accuracy | all expected facts present, nothing forbidden (unanswerable: model abstained) |
+| Fact recall | share of expected facts found in the answer |
+| Citation accuracy | expected circular cited in the answer |
+| Hallucination rate | wrong circular cited, or an answer to an unanswerable question |
+| False / correct abstention | "not found" on answerable / unanswerable questions |
+| hit@k, recall@k, MRR | retrieval quality of the chunks given to the LLM |
+| Mean latency | seconds per question |
+
+Run it (needs Qdrant, Neo4j and Ollama running, corpus indexed):
+
+```bash
+PYTHONPATH=. python -m src.bct_rag.evaluation.run_eval
+```
+
+Results are written to `eval_results/eval_<timestamp>.md` and `.json`.
+
+Offline tests (no services needed):
+
+```bash
+python -m pytest tests/unit -m "not slow" -v
+```
+
+---
+
 # Development Workflow
 
 Development is organized into separate feature branches.

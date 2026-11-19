@@ -91,7 +91,10 @@ def generate(question, documents, graph_context: str | None = None):
 
     {graph_context}
     """
-        user_prompt = f"""
+    # Built for BOTH phases. (Previously this was indented under
+    # `if graph_context:`, so Phase 1 — no graph context — crashed
+    # with UnboundLocalError.)
+    user_prompt = f"""
     Context
     =======
 
@@ -114,12 +117,10 @@ graph alone) to determine your answer:
 - Do NOT explain your reasoning.
 - Do NOT think step by step.
 - Cite the circular number and article.
+- Do not reinterpret or simplify legal conditions.
+- Preserve the meaning of the regulation.
+- If possible, quote numerical thresholds exactly as written in the context.
 - If the answer is missing from the context, reply exactly:
-Do not reinterpret or simplify legal conditions.
-
-Preserve the meaning of the regulation.
-
-If possible, quote numerical thresholds exactly as written in the context.
 I could not find this information in the available regulations.
 
 Format:

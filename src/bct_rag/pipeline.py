@@ -1,7 +1,5 @@
 import re
 
-from src.bct_rag.ingestion.pipeline import run as ingest
-from src.bct_rag.indexing.index_qdrant import main as index_qdrant
 from src.bct_rag.retrieval.retriever import retrieve, graph_enhanced_retrieve
 from src.bct_rag.retrieval.graph_retriever import format_graph_context, GraphRetriever
 from src.bct_rag.llm.generator import generate
@@ -56,6 +54,11 @@ def _try_law_diff_query(question: str):
 
 
 def run():
+    # Imported here so that querying (ask / MCP / evaluation) does not
+    # require the heavy ingestion dependencies (docling, OCR).
+    from src.bct_rag.ingestion.pipeline import run as ingest
+    from src.bct_rag.indexing.index_qdrant import main as index_qdrant
+
     print("=" * 70)
     print("BCT RAG PIPELINE")
     print("=" * 70)
@@ -67,27 +70,50 @@ def run():
     print("\nPipeline completed successfully.")
 
 
-def ask(question: str, use_graph: bool = False):
+def ask_detailed(question: str, use_graph: bool = False) -> dict:
+    """
+    Same logic as ask(), but returns everything the evaluation needs:
+    the answer, the retrieved documents, the graph context and which
+    route produced the answer ("vector", "graph_enhanced" or
+    "graph_router").
+    """
 
     if use_graph:
 
         graph_answer = _try_law_diff_query(question)
         if graph_answer is not None:
-            return graph_answer
+            return {
+                "answer": graph_answer,
+                "docs": [],
+                "graph_context": None,
+                "route": "graph_router",
+            }
 
         enriched = graph_enhanced_retrieve(question)
         docs = [item["vector_result"] for item in enriched]
         graph_context = format_graph_context(enriched)
+        route = "graph_enhanced"
 
     else:
         docs = retrieve(question)
         graph_context = None
+        route = "vector"
 
     print(f"Retrieved {len(docs)} chunks, generating answer...")
 
     answer = generate(question, docs, graph_context=graph_context)
 
-    return answer
+    return {
+        "answer": answer,
+        "docs": docs,
+        "graph_context": graph_context,
+        "route": route,
+    }
+
+
+def ask(question: str, use_graph: bool = False):
+
+    return ask_detailed(question, use_graph=use_graph)["answer"]
 
 
 if __name__ == "__main__":
