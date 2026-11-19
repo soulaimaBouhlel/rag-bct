@@ -137,4 +137,10 @@ def test_run_eval_end_to_end_with_fake_pipeline():
     assert p1["hallucination_rate"] == pytest.approx(1 / 3, abs=1e-3)
     assert p2["hallucination_rate"] == 0.0
     assert p2["accuracy"] == 1.0
-    assert "| Answer accuracy |" in run_eval.to_markdown(report)
+    # Retrieval is reported once (from Phase 1), so the router question
+    # can't silently inflate Phase 2's retrieval average.
+    assert report["summary"]["retrieval"]["hit@k"] == pytest.approx(0.5)
+
+    markdown = run_eval.to_markdown(report)
+    assert "| Answer accuracy |" in markdown
+    assert "## Retrieval (shared by both phases)" in markdown

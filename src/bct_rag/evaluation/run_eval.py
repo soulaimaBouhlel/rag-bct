@@ -39,10 +39,19 @@ SUMMARY_METRICS = [
     ("hallucination_rate", "Hallucination rate (lower is better)"),
     ("false_abstention_rate", "False abstention rate (lower is better)"),
     ("correct_abstention_rate", "Correct abstention (unanswerable)"),
-    ("hit@k", "Retrieval hit@k"),
-    ("recall@k", "Retrieval recall@k"),
-    ("mrr", "Retrieval MRR"),
     ("mean_latency_s", "Mean latency (s)"),
+    ("mean_latency_llm_s", "Mean latency, LLM answers only (s)"),
+]
+
+# Phase 2 reuses Phase 1's vector search (graph_enhanced_retrieve calls
+# retrieve()), so retrieval is reported ONCE, from Phase 1. Averaging it
+# per phase would be misleading: the graph router skips retrieval, so
+# Phase 2's average would silently drop the hardest question.
+RETRIEVAL_METRICS = [
+    ("hit@k", "hit@k"),
+    ("recall@k", "recall@k"),
+    ("precision@k", "precision@k"),
+    ("mrr", "MRR"),
 ]
 
 
@@ -95,7 +104,16 @@ def run(items: list[dict], ask_fn=None) -> dict:
             rows.append(evaluate_item(item, use_graph, ask_fn))
 
         report["phases"][phase] = rows
-        report["summary"][phase] = aggregate(rows)
+        summary = aggregate(rows)
+        llm_latencies = [r["latency_s"] for r in rows if r["route"] != "graph_router"]
+        summary["mean_latency_llm_s"] = (
+            round(sum(llm_latencies) / len(llm_latencies), 3) if llm_latencies else None
+        )
+        report["summary"][phase] = summary
+
+    report["summary"]["retrieval"] = {
+        key: report["summary"]["phase1_vector"][key] for key, _ in RETRIEVAL_METRICS
+    }
 
     return report
 
@@ -123,18 +141,35 @@ def to_markdown(report: dict) -> str:
     for key, label in SUMMARY_METRICS:
         lines.append(f"| {label} | {_fmt(p1[key])} | {_fmt(p2[key])} |")
 
+    retrieval = report["summary"]["retrieval"]
+
+    lines += [
+        "",
+        "## Retrieval (shared by both phases)",
+        "",
+        "Phase 2 reuses Phase 1's vector search and only adds graph context,",
+        "so the retrieved chunks are the same.",
+        "",
+        "| Metric | Value |",
+        "|---|---|",
+    ]
+
+    for key, label in RETRIEVAL_METRICS:
+        lines.append(f"| {label} | {_fmt(retrieval[key])} |")
+
     lines += [
         "",
         "## Per question",
         "",
-        "| Question | Category | P1 correct | P2 correct | P1 halluc. | P2 halluc. | P2 route |",
-        "|---|---|---|---|---|---|---|",
+        "| Question | Category | P1 correct | P2 correct | P1 halluc. | P2 halluc. | Retrieval hit | P2 route |",
+        "|---|---|---|---|---|---|---|---|",
     ]
 
     for r1, r2 in zip(report["phases"]["phase1_vector"], report["phases"]["phase2_graph"]):
         lines.append(
             f"| {r1['id']} | {r1['category']} | {_fmt(r1['correct'])} | {_fmt(r2['correct'])} "
-            f"| {_fmt(r1['hallucination'])} | {_fmt(r2['hallucination'])} | {r2['route']} |"
+            f"| {_fmt(r1['hallucination'])} | {_fmt(r2['hallucination'])} "
+            f"| {_fmt(r1['hit'])} | {r2['route']} |"
         )
 
     return "\n".join(lines) + "\n"

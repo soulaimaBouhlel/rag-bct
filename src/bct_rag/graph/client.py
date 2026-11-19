@@ -1,6 +1,12 @@
+import logging
 import os
 
 from neo4j import GraphDatabase
+
+# The expansion queries list AMENDS even when the corpus has no AMENDS
+# edge yet; Neo4j then logs a long "relationship type does not exist"
+# warning on every call. Only show real errors.
+logging.getLogger("neo4j.notifications").setLevel(logging.ERROR)
 
 
 class GraphClient:
