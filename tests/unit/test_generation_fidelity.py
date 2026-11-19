@@ -33,6 +33,9 @@ import re
 
 import pytest
 
+# These tests call the real Ollama model.
+pytestmark = pytest.mark.slow
+
 from src.bct_rag.llm.generator import generate
 
 

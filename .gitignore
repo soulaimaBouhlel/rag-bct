@@ -72,3 +72,6 @@ EOF
 # Neo4j database/runtime data
 neo4j_data/
 
+
+# Evaluation reports
+eval_results/

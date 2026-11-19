@@ -1,0 +1,119 @@
+[
+  {
+    "id": "laws_of_2026_03",
+    "category": "single_doc",
+    "question": "Sur quelles lois se fonde la circulaire 2026-03 ?",
+    "expected_chunks": ["Cir_2026_03_fr-preamble"],
+    "facts": ["2016-35", "2016-48"],
+    "circulars": ["2026-03"],
+    "forbidden": []
+  },
+  {
+    "id": "dividend_conditions",
+    "category": "single_doc",
+    "question": "Quelles sont les conditions de distribution des dividendes ?",
+    "expected_chunks": ["Cir_2026_03_fr-article-1"],
+    "facts": ["35%", "2,5%", "3,5%", "accord prealable"],
+    "circulars": ["2026-03"],
+    "forbidden": []
+  },
+  {
+    "id": "dividend_prior_approval",
+    "category": "single_doc",
+    "question": "Dans quels cas l'accord préalable de la Banque Centrale de Tunisie est-il requis pour une distribution de dividendes ?",
+    "expected_chunks": ["Cir_2026_03_fr-article-2"],
+    "facts": ["reserves", "observation", "2018-06"],
+    "circulars": ["2026-03"],
+    "forbidden": []
+  },
+  {
+    "id": "dividend_request_deadline",
+    "category": "single_doc",
+    "question": "Dans quel délai une demande d'autorisation de distribution de dividendes doit-elle parvenir à la BCT ?",
+    "expected_chunks": ["Cir_2026_03_fr-article-3"],
+    "facts": ["15|quinze", "assemblee generale"],
+    "circulars": ["2026-03"],
+    "forbidden": []
+  },
+  {
+    "id": "scope_payment_institutions",
+    "category": "single_doc",
+    "question": "La circulaire 2026-3 est-elle applicable aux établissements de paiement ?",
+    "expected_chunks": ["Cir_2026_03_fr-article-4"],
+    "facts": ["pas applicable|n'est pas applicable|ne s'applique pas|non applicable"],
+    "circulars": ["2026-03"],
+    "forbidden": []
+  },
+  {
+    "id": "savings_rate_tre",
+    "category": "single_doc",
+    "question": "Quel est le taux de rémunération de l'épargne (TRE) fixé par la circulaire 2026-1 ?",
+    "expected_chunks": ["Cir_2026_01_fr-article-36"],
+    "facts": ["6%"],
+    "circulars": ["2026-01"],
+    "forbidden": []
+  },
+  {
+    "id": "tre_entry_into_force",
+    "category": "single_doc",
+    "question": "À partir de quelle date la circulaire 2026-1 entre-t-elle en vigueur ?",
+    "expected_chunks": ["Cir_2026_01_fr-article-2"],
+    "facts": ["2 janvier 2026|02/01/2026|2 jan"],
+    "circulars": ["2026-01"],
+    "forbidden": []
+  },
+  {
+    "id": "new_banknote",
+    "category": "single_doc",
+    "question": "Quel nouveau billet de banque la BCT met-elle en circulation à partir du 16 février 2026 ?",
+    "expected_chunks": ["Note_2026_43_fr-article-1"],
+    "facts": ["vingt dinars|20 dinars"],
+    "circulars": ["2026-43"],
+    "forbidden": []
+  },
+  {
+    "id": "import_financing_condition",
+    "category": "single_doc",
+    "question": "À quelle condition les intermédiaires agréés peuvent-ils financer l'importation de produits non prioritaires ?",
+    "expected_chunks": ["Cir_2026_04_fr-article-1"],
+    "facts": ["deposit", "totalite"],
+    "circulars": ["2026-04"],
+    "forbidden": []
+  },
+  {
+    "id": "law_diff_2016_35_not_2016_48",
+    "category": "cross_doc_negation",
+    "question": "Quelles circulaires se basent sur la loi n°2016-35 mais pas sur la loi n°2016-48 ?",
+    "expected_chunks": ["Note_2026_43_fr-preamble"],
+    "facts": ["2026-43"],
+    "circulars": ["2026-43"],
+    "forbidden": ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05"]
+  },
+  {
+    "id": "law_intersection_2016_35_and_2016_48",
+    "category": "cross_doc",
+    "question": "Quelles circulaires se basent à la fois sur la loi n°2016-35 et sur la loi n°2016-48 ?",
+    "expected_chunks": [
+      "Cir_2026_01_fr-preamble",
+      "Cir_2026_02_fr-preamble",
+      "Cir_2026_03_fr-preamble",
+      "Cir_2026_04_fr-preamble",
+      "Cir_2026_05_fr-preamble"
+    ],
+    "facts": ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05"],
+    "circulars": [],
+    "forbidden": ["2026-43"]
+  },
+  {
+    "id": "unanswerable_branch_capital",
+    "category": "unanswerable",
+    "question": "Quel est le capital minimum exigé pour ouvrir une succursale bancaire en Tunisie ?",
+    "should_abstain": true
+  },
+  {
+    "id": "unanswerable_policy_rate",
+    "category": "unanswerable",
+    "question": "Quel est le taux directeur de la Banque Centrale de Tunisie fixé en mars 2026 ?",
+    "should_abstain": true
+  }
+]
